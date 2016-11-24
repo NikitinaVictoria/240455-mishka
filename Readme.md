@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Виктория Никитина](https://up.htmlacademy.ru/adaptive/9/user/240455).
-* Наставник: `Неизвестно`.
+* Наставник: Владислав Балабанович (https://htmlacademy.ru/profile/vladbesson).
 
 ---
 
