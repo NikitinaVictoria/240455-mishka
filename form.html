@@ -7,7 +7,7 @@
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Мишка</h1>
-      <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/150x100" alt=""></img></a></div>
+      <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/150x100" alt=""></a></div>
       <nav class="header-nav header-nav--closed header-nav--nojs">
         <button class="header-nav__button header-nav__button--hamburger" type="button"></button>
         <ul class="header-nav__nav-list">
@@ -23,7 +23,7 @@
         <h1>Вязание на заказ</h1>
       </div>
       <p class="form-intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="form" action="post">
+      <form class="form" action="#">
         <fieldset class="form__category">
           <legend class="form__category-title">Тип</legend>
           <input id="accessory" name="category" type="radio" value="accessory">
@@ -33,7 +33,7 @@
         </fieldset>
         <fieldset class="form__color">
           <legend class="form__color-title">Цвет</legend>
-          <input id="white"type="checkbox">
+          <input id="white" type="checkbox">
           <label for="white">Белый</label>
           <input id="gray" type="checkbox">
           <label for="gray">Серый</label>
@@ -57,11 +57,11 @@
         </fieldset>
         <fieldset class="form__сеll">
           <legend class="form__сеll-title">ТЕЛ</legend>
-          <input id="cell" type="tel" name="" placeholder="+7 ХХХ ХХ ХХ*" pattern="[+]{1}[7]{1} [0-9]{3} [0-9]{3} [0-9]{3}" required>
+          <input id="cell" type="tel" name="cell-field" placeholder="+7 ХХХ ХХ ХХ*" pattern="[+]{1}[7]{1} [0-9]{3} [0-9]{3} [0-9]{3}" required>
         </fieldset>
         <fieldset>
           <legend class="form__email-title">E-MAIL</legend>
-          <input id="email" type="email" name="" placeholder="Ваш Email*" required>
+          <input id="email" type="email" name="email-field" placeholder="Ваш Email*" required>
         </fieldset>
         <fieldset>
           <legend class="form__extra">ДОП</legend>
