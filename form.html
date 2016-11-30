@@ -23,15 +23,29 @@
         <h1>Вязание на заказ</h1>
       </div>
       <p class="form-intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form action="">
-        <fieldset>
-          <legend>Тип</legend>
+      <form class="form" action="post">
+        <fieldset class="form__category">
+          <legend class="form__category-title">Тип</legend>
           <input id="accessory" name="category" type="radio" value="accessory">
           <label for="accessory">Аксессуар для интерьера</label>
           <input id="toy" name="category" type="radio" value="toy">
           <label for="toy">Детская игрушка</label>
         </fieldset>
-        <fieldset></fieldset>
+        <fieldset class="form__color">
+          <legend class="form__color-title">Цвет</legend>
+          <input id="white"type="checkbox">
+          <label for="white">Белый</label>
+          <input id="gray" type="checkbox">
+          <label for="gray">Серый</label>
+          <input id="tiffany" type="checkbox">
+          <label for="tiffany">«Тиффани»</label>
+          <input id="black" type="checkbox">
+          <label for="black">Черный</label>
+          <input id="pink" type="checkbox">
+          <label for="pink">Розовый</label>
+          <input id="orange" type="checkbox">
+          <label for="orange">Оранжевый</label>
+        </fieldset>
         <fieldset></fieldset>
         <fieldset></fieldset>
         <fieldset></fieldset>
