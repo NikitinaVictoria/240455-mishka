@@ -1,5 +1,25 @@
 @import "../mixins.scss";
 
 .page-footer {
+  @include body-font-family;
+  background-color: #f1f1f1;
+}
+
+.page-footer__copyright span {
+  font-size: 19px;
+  line-height: 18px;
+}
+
+.page-footer__social {
   @include container;
+  padding-top: 24px;
+  padding-bottom: 29px;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+
+.page-footer__copyright {
+  @include container;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
