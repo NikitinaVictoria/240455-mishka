@@ -1,0 +1,52 @@
+@import "../mixins.scss";
+
+.product-of-the-week {
+  color: #444444;
+
+  @include body-font-family();
+  @include container();
+}
+
+.product-of-the-week__title {
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.product-of-the-week__label {
+  font-size: 17px;
+  line-height: 16px;
+  color: #63d1bb;
+}
+
+.product-of-the-week__description,
+.product-of-the-week__characteristics {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.product-of-the-week__characteristics {
+  line-height: 20px;
+  font-size: 0;
+}
+
+.product-of-the-week__characteristics p {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.product-of-the-week__characteristic-name {
+  width: 98px;
+}
+
+.product-of-the-week__characteristic-value {
+  width: 162px;
+}
+
+.product-of-the-week__price {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 28px;
+}

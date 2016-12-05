@@ -1,0 +1,6 @@
+@import "../mixins.scss";
+
+.features {
+  @include container();
+  @include body-font-family();
+}
