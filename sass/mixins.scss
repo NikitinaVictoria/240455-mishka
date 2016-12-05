@@ -1,14 +1,21 @@
 @import "variables.scss";
 
 @mixin body-font-family() {
-  font-family: $font-family;
   font-weight: bold;
+  font-family: $font-family;
 }
 
 @mixin container($padding-r: 30px) {
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-  padding-left: 30px;
   padding-right: $padding-r;
+  padding-left: 30px;
+}
+
+@mixin unstyle-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }

@@ -4,3 +4,19 @@
   @include container();
   @include body-font-family();
 }
+
+.features__title {
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.features__list {
+  @include unstyle-list();
+}
+
+.features__list-item {
+  font-size: 17px;
+  line-height: 21px;
+  padding-top: 60px;
+}
