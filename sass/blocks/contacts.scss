@@ -1,0 +1,55 @@
+@import "../mixins.scss";
+
+.contacts {
+  @include body-font-family;
+  padding-bottom: 39px;
+}
+
+.contacts__title {
+  margin-top: 44px;
+  margin-bottom: 43px;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  @include container;
+}
+
+.contacts__info {
+  font-size: 0;
+
+  @include container;
+  margin-bottom: 36px;
+}
+
+.contacts__info p {
+  display: inline-block;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  vertical-align: top;
+  color: #444444;
+}
+
+.contacts__info-email,
+.contacts__info-address {
+  box-sizing: border-box;
+  width: 190px;
+  padding-left: 40px;
+}
+
+.contacts__info-email a {
+  color: #444444;
+  text-decoration: none;
+}
+
+.contacts__map {
+  margin: 0 auto;
+  width: 320px;
+  margin-bottom: 39px
+}
+
+.contacts__write-us {
+  @include container;
+}
