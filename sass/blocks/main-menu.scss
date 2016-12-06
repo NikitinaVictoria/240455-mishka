@@ -1,0 +1,31 @@
+@import "../mixins.scss";
+
+.main-menu {
+  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-menu__item-wrapper {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+
+  @include container(150px);
+  @include body-font-family();
+}
+
+.main-menu__item-interior {
+  background-color: #63d1bb;
+}
+
+.main-menu__item-toys {
+  background-color: #56c3b2;
+}

@@ -1,0 +1,51 @@
+@import "../mixins.scss";
+
+.item {
+  padding-bottom: 32px;
+
+  border: 1px solid #ececec;
+
+  @include body-font-family;
+  @include container(0, 0, 260px, 30px);
+}
+
+.item__link {
+  display: block;
+
+  text-decoration: none;
+}
+
+.item__photo {
+  margin-bottom: 31px;
+}
+
+.item__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  margin-left: 30px;
+
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.item__description {
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-bottom: 28px;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 30px;
+  color: #444444;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.item__price {
+  margin-top: 22px;
+  margin-left: 30px;
+
+  font-size: 15px;
+  line-height: 24px;
+}

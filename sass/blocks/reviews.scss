@@ -1,0 +1,46 @@
+@import "../mixins.scss";
+
+.reviews {
+  @include body-font-family();
+  @include container();
+  padding-bottom: 44px;
+}
+
+.reviews__title {
+  margin-top: 61px;
+
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 38px;
+}
+
+.reviews__item {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.reviews__content {
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+  font-weight: normal;
+}
+
+.reviews__author-name {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.reviews__author-social-link {
+  color: #444444;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.reviews__write {
+  margin-top: 38px;
+  @include btn;
+}

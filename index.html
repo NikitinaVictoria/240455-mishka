@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Мишка</h1>
-      <div class="page-header__logo"><img src="http://placehold.it/150x100" alt=""></div>
+      <a class="page-header__logo"><img src="img/logo-mobile.svg" alt=""></a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
         <button class="header-nav__button header-nav__button--hamburger" type="button"></button>
         <ul class="header-nav__nav-list">
@@ -20,7 +21,7 @@
     </header>
     <main>
       <section class="intro">
-        <p>Милые штуки ручной работы для дома</p>
+        <p>Милые штуки ручной<br>работы для дома</p>
       </section>
       <ul class="main-menu">
         <li class="main-menu__item-interior">
@@ -36,15 +37,15 @@
         <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <div class="product-of-the-week__characteristics">
           <p class="product-of-the-week__characteristic-name">Цвет:</p>
-          <p>«Тиффани»/серый</p>
+          <p class="product-of-the-week__characteristic-value">«Тиффани»/серый</p>
           <p class="product-of-the-week__characteristic-name">Диаметр:</p>
-          <p>25 см</p>
+          <p class="product-of-the-week__characteristic-value">25 см</p>
           <p class="product-of-the-week__characteristic-name">Высота:</p>
-          <p>15 см</p>
+          <p class="product-of-the-week__characteristic-value">15 см</p>
         </div>
-        <img src="http://placehold.it/150x100" alt="">
+        <img src="../img/triple-set-mobile@1x.jpg" width="260" height="315" alt="">
         <div class="product-of-the-week__price">Цена: 990 руб.</div>
-        <a class="product-of-the-week__order btn" href="">Заказать</a>
+        <a class="product-of-the-week__order" href="">Заказать</a>
       </article>
       <section class="features">
         <h2 class="features__title">Коротко о нас:</h2>
@@ -60,26 +61,26 @@
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
         <blockquote class="reviews__item">
-          <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <p class="reviews__content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <p class="reviews__author-name">Анастасия Красильникова</p>
           <cite class="reviews__author-social-link">@misssssiskras</cite>
         </blockquote>
         <button class="reviews__prev" type="button">Предыдущий</button>
         <button class="reviews__next" type="button">Следующий</button>
-        <a class="reviews__write btn" href="">Написать</a>
+        <a class="reviews__write" href="">Написать</a>
       </section>
-      <section class="contancts">
-        <h3 class="contancts__title">Контакты</h3>
-        <div class="contancts__info">
-          <p class="contancts__e-mail">e-mail:</p>
-          <p><a href="">info@mimimishkashop.ru</a></p>
-          <p class="contancts__address">адрес:</p>
-          <p>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+      <section class="contacts">
+        <h3 class="contacts__title">Контакты</h3>
+        <div class="contacts__info">
+          <p class="contacts__info-title">e-mail:</p>
+          <p class="contacts__info-email"><a href="">info@mimimishkashop.ru</a></p>
+          <p class="contacts__info-title">адрес:</p>
+          <p class="contacts__info-address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
         </div>
-        <div class="contancts__map">
-          <img src="http://placehold.it/150x100" alt="Карта">
+        <div class="contacts__map">
+          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
         </div>
-        <a class="contancts__write-us btn" href="">Напишите нам</a>
+        <a class="contacts__write-us" href="">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -97,13 +98,13 @@
       <h1 class="modal-content__title">Добавить в корзину</h1>
       <form action="#" class="modal-content__form">
         <p class="modal-content__form-title">Выберите размер:</p>
-        <label for="s-size">S</label>
+        <label class="modal-content__size" for="s-size">S</label>
         <input id="s-size" type="radio" name="size" value="s">
-        <label for="m-size">M</label>
+        <label class="modal-content__size" for="m-size">M</label>
         <input id="m-size" type="radio" name="size" value="m">
-        <label for="l-size">L</label>
+        <label class="modal-content__size" for="l-size">L</label>
         <input id="l-size" type="radio" name="size" value="l">
-        <button type="button">Добавить</button>
+        <button class="modal-content__btn" type="button">Добавить</button>
       </form>
     </div>
   </body>
