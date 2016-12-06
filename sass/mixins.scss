@@ -5,12 +5,13 @@
   font-family: $font-family;
 }
 
-@mixin container($padding-r: 30px) {
+@mixin container($padding-r: 30px, $padding-l: 30px, $width: 320px, $margin-t: 0) {
   box-sizing: border-box;
-  width: 320px;
+  width: $width;
   margin: 0 auto;
+  margin-top: $margin-t;
   padding-right: $padding-r;
-  padding-left: 30px;
+  padding-left: $padding-l;
 }
 
 @mixin unstyle-list {
