@@ -1,0 +1,68 @@
+@import "../mixins.scss";
+
+.modal-content {
+  padding-top: 36px;
+  padding-bottom: 46px;
+
+  @include container;
+  @include body-font-family;
+}
+
+.modal-content__title {
+  width: 146px;
+  margin: 0 auto;
+  margin-bottom: 26px;
+
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal-content__form {
+  font-size: 0;
+  text-align: justify;
+}
+
+.modal-content__form input {
+  display: none;
+}
+
+.modal-content__form-title {
+  margin-bottom: 28px;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  color: #444444;
+}
+
+.modal-content__size {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 78px;
+  height: 52px;
+
+  font-size: 17px;
+  line-height: 52px;
+  vertical-align: top;
+  text-align: center;
+  color: #444444;
+
+  border: 2px solid rgba(68, 68, 68, 0.1);
+}
+
+.modal-content__btn {
+  width: 260px;
+  height: 52px;
+  margin-top: 31px;
+
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #63d1bb;
+  border: none;
+}
