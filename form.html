@@ -25,15 +25,15 @@
       </div>
       <p class="form-intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form" action="#">
-        <fieldset class="form__category">
-          <legend class="form__category-title">Тип</legend>
+        <fieldset class="form__field form__field--category">
+          <legend class="form__title form__title--category">Тип</legend>
           <input id="accessory" name="category" type="radio" value="accessory">
           <label for="accessory">Аксессуар для интерьера</label>
           <input id="toy" name="category" type="radio" value="toy">
           <label for="toy">Детская игрушка</label>
         </fieldset>
-        <fieldset class="form__color">
-          <legend class="form__color-title">Цвет</legend>
+        <fieldset class="form__field form__field--color">
+          <legend class="form__title form__title--color">Цвет</legend>
           <input id="white" type="checkbox">
           <label for="white">Белый</label>
           <input id="gray" type="checkbox">
@@ -47,8 +47,8 @@
           <input id="orange" type="checkbox">
           <label for="orange">Оранжевый</label>
         </fieldset>
-        <fieldset class="form__name">
-          <legend class="form__name-title">ФИО</legend>
+        <fieldset class="form__field fform__field--name">
+          <legend class="form__title form__title--name">ФИО</legend>
           <label for="name">Имя:</label>
           <input id="name" type="text" placeholder="Введите ваше имя*" required>
           <label for="surname">Фамилия:</label>
@@ -56,20 +56,20 @@
           <label for="patronym">Отчество:</label>
           <input id="patronym" type="text" placeholder="Отчество, если желаете">
         </fieldset>
-        <fieldset class="form__сеll">
-          <legend class="form__сеll-title">ТЕЛ</legend>
+        <fieldset class="form__field form__field--сеll">
+          <legend class="form__title form__title--сеll">ТЕЛ</legend>
           <input id="cell" type="tel" name="cell-field" placeholder="+7 ХХХ ХХ ХХ*" pattern="[+]{1}[7]{1} [0-9]{3} [0-9]{3} [0-9]{3}" required>
         </fieldset>
-        <fieldset>
-          <legend class="form__email-title">E-MAIL</legend>
+        <fieldset class="form__field form__field--email">
+          <legend class="form__title form__title--email">E-MAIL</legend>
           <input id="email" type="email" name="email-field" placeholder="Ваш Email*" required>
         </fieldset>
-        <fieldset>
-          <legend class="form__extra">ДОП</legend>
-          <textarea name="extra" rows="8" cols="80">Опишите все ваши пожелания к заказу</textarea>
+        <fieldset class="form__field form__field--extra">
+          <legend class="form__title form__title--extra">ДОП</legend>
+          <textarea name="extra">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
         <p class="form__note">*Поля обязательны для заполнения</p>
-        <button class="btn" type="submit">Отправить заказ</button>
+        <button class="form__btn" type="submit">Отправить заказ</button>
       </form>
     </main>
     <footer class="page-footer">
