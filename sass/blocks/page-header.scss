@@ -1,3 +1,5 @@
+@import "../mixins.scss";
+
 .page-header {
   @include container();
 }
