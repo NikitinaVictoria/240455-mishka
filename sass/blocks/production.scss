@@ -1,0 +1,39 @@
+@import "../mixins.scss";
+
+.production {
+  margin-bottom: 58px;
+
+  border: 1px solid #ececec;
+
+  @include body-font-family;
+  @include container(0, 0, 260px, 30px);
+}
+
+.production__title {
+  margin-bottom: 26px;
+  margin-left: 34px;
+
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.production__video {
+  margin-bottom: 34px;
+}
+
+.production__description {
+  margin-top: 0;
+  margin-bottom: 28px;
+  margin-left: 34px;
+
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444;
+}
+
+.production__order {
+  margin: 0 auto;
+  margin-bottom: 33px;
+
+  @include btn(192px);
+}

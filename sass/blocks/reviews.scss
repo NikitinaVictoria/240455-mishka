@@ -42,4 +42,5 @@
 
 .reviews__write {
   margin-top: 38px;
+  @include btn;
 }

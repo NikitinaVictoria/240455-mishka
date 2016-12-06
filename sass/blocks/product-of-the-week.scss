@@ -50,3 +50,7 @@
   text-align: center;
   margin-bottom: 28px;
 }
+
+.product-of-the-week__order {
+  @include btn;
+}
