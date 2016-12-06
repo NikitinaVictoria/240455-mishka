@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Мишка</h1>
-      <a href="index.html"><img src="http://placehold.it/150x100" alt=""></a>
+      <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
         <button class="header-nav__button header-nav__button--hamburger" type="button"></button>
         <ul class="header-nav__nav-list">
@@ -23,19 +23,19 @@
       <div class="catalog-heading">
         <h1>Каталог товаров</h1>
       </div>
-      <article class="item-rabbit">
+      <article class="item item--rabbit">
         <a href=""><img class="item-rabbit__photo" src="http://placehold.it/150x100" alt=""></a>
         <h2 class="item-rabbit__title"><a href="">Зайчик-попрыгайчик</a></h2>
         <p class="item-rabbit__description">Рост 30 см, вес 200 г</p>
         <div class="item-rabbit__price">1 200 руб.<a href=""></a></div>
       </article>
-      <article class="item-underwear-basket">
+      <article class="item item--underwear-basket">
         <a href=""><img class="item-underwear-basket__photo" src="http://placehold.it/150x100" alt=""></a>
         <h2 class="item-underwear-basket__title"><a href="">Корзинка для белья</a></h2>
         <p class="item-underwear-basket__description">Диаметр 15 см, высота 10 см</p>
         <div class="item-underwear-basket__price">690 руб.<a href=""></a></div>
       </article>
-      <article class="item-toys-basket">
+      <article class="item item--toys-basket">
         <a href=""><img class="item-toys-basket__photo" src="http://placehold.it/150x100" alt=""></a>
         <h2 class="item-toys-basket__title"><a href="">Большая корзинка для игрушек</a></h2>
         <p class="item-toys-basket__description">Диаметр 30 см, высота 30 см</p>
@@ -63,13 +63,13 @@
       <h1 class="modal-content__title">Добавить в корзину</h1>
       <form action="#" class="modal-content__form">
         <p class="modal-content__form-title">Выберите размер:</p>
-        <label for="s-size">S</label>
+        <label class="modal-content__size" for="s-size">S</label>
         <input id="s-size" type="radio" name="size" value="s">
-        <label for="m-size">M</label>
+        <label class="modal-content__size" for="m-size">M</label>
         <input id="m-size" type="radio" name="size" value="m">
-        <label for="l-size">L</label>
+        <label class="modal-content__size" for="l-size">L</label>
         <input id="l-size" type="radio" name="size" value="l">
-        <button type="button">Добавить</button>
+        <button class="modal-content__btn" type="button">Добавить</button>
       </form>
     </div>
   </body>

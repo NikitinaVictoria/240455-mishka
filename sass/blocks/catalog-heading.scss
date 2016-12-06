@@ -1,0 +1,17 @@
+@import "../mixins.scss";
+
+.catalog-heading {
+  padding-top: 74px;
+  padding-bottom: 74px;
+
+  background-color: #f1f1f1;
+}
+
+.catalog-heading h1 {
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+
+  @include body-font-family;
+  @include container;
+}
