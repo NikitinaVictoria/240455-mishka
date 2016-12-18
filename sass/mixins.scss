@@ -1,12 +1,8 @@
 @import "variables.scss";
 
-@mixin container($padding-r: 30px, $padding-l: 30px, $width: 320px, $margin-t: 0) {
-  box-sizing: border-box;
-  width: $width;
+@mixin container {
+  width: 320px;
   margin: 0 auto;
-  margin-top: $margin-t;
-  padding-right: $padding-r;
-  padding-left: $padding-l;
 
   @media #{min-width: 768px} {
   width: 695px;

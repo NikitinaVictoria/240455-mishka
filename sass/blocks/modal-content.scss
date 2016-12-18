@@ -4,7 +4,7 @@
   padding-top: 36px;
   padding-bottom: 46px;
 
-  @include container;
+  @include container();
 }
 
 .modal-content__title {
@@ -13,7 +13,6 @@
   margin-bottom: 26px;
 
   font-size: 25px;
-  line-height: 30px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -32,7 +31,6 @@
 
   font-weight: normal;
   font-size: 15px;
-  line-height: 30px;
   text-align: center;
   color: #444444;
 }

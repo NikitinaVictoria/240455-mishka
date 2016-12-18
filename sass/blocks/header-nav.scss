@@ -1,27 +1,21 @@
 @import "../mixins.scss";
 
 .header-nav__nav-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  @include unstyle-list();
 }
 
 .header-nav__nav-list-item a {
-  font-size: 17px;
   line-height: 24px;
   color: #000000;
   text-decoration: none;
 }
 
 .header-nav__nav-list-item-search input {
-  font-size: 17px;
   line-height: 24px;
   color: #000000;
 }
 
 .header-nav__nav-list-item-cart a {
-  font-size: 17px;
   line-height: 24px;
   color: #000000;
   text-decoration: none;

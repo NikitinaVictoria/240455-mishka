@@ -9,15 +9,14 @@
   margin-bottom: 43px;
 
   font-size: 18px;
-  line-height: 30px;
 
-  @include container;
+  @include container();
 }
 
 .contacts__info {
   font-size: 0;
 
-  @include container;
+  @include container();
   margin-bottom: 36px;
 }
 
@@ -26,7 +25,6 @@
 
   font-weight: normal;
   font-size: 15px;
-  line-height: 30px;
   vertical-align: top;
   color: #444444;
 }
@@ -50,6 +48,6 @@
 }
 
 .contacts__write-us {
-  @include container;
-  @include btn;
+  @include container();
+  @include btn();
 }

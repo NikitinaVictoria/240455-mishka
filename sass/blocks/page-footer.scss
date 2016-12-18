@@ -10,7 +10,7 @@
 }
 
 .page-footer__social {
-  @include container;
+  @include container();
   padding-top: 24px;
   padding-bottom: 29px;
   border-bottom: 1px solid #e5e5e5;
@@ -18,7 +18,7 @@
 }
 
 .page-footer__copyright {
-  @include container;
+  @include container();
   padding-top: 22px;
   padding-bottom: 22px;
 }

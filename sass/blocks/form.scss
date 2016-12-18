@@ -1,12 +1,11 @@
 @import "../mixins.scss";
 
 .form {
-  @include container;
+  @include container();
 }
 
 .form label {
   display: block;
-  font-size: 17px;
   line-height: 18px;
 }
 
@@ -24,14 +23,13 @@
 }
 
 .form__title {
-  font-size: 17px;
   line-height: 16px;
   color: #62d1ba;
   text-transform: uppercase;
 }
 
 .form__title--category {
-    padding-right: 27px;
+  padding-right: 27px;
 }
 
 .form__field--extra {
@@ -50,6 +48,6 @@
 }
 
 .form__btn {
-  @include btn;
+  @include btn();
   margin-bottom: 55px;
 }
