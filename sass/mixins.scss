@@ -1,14 +1,14 @@
 @import "variables.scss";
 
-@mixin container {
+@mixin container() {
   width: 320px;
   margin: 0 auto;
 
-  @media #{min-width: 768px} {
+  @media #{$tablet-widths} {
   width: 695px;
   }
 
-  @media #{min-width: 1150px} {
+  @media #{$desktop-widths} {
   width: 1050px;
   }
 }
