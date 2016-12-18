@@ -2,8 +2,6 @@
 
 .product-of-the-week {
   color: #444444;
-
-  @include body-font-family();
   @include container();
 }
 

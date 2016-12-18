@@ -2,7 +2,6 @@
 
 .features {
   @include container();
-  @include body-font-family();
 }
 
 .features__title {

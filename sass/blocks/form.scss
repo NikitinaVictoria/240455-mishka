@@ -2,7 +2,6 @@
 
 .form {
   @include container;
-  @include body-font-family;
 }
 
 .form label {

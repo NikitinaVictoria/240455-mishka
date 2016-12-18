@@ -4,8 +4,6 @@
   margin-bottom: 58px;
 
   border: 1px solid #ececec;
-
-  @include body-font-family;
   @include container(0, 0, 260px, 30px);
 }
 

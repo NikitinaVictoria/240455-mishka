@@ -1,10 +1,5 @@
 @import "variables.scss";
 
-@mixin body-font-family() {
-  font-weight: bold;
-  font-family: $font-family;
-}
-
 @mixin container($padding-r: 30px, $padding-l: 30px, $width: 320px, $margin-t: 0) {
   box-sizing: border-box;
   width: $width;

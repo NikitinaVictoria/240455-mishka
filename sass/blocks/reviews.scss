@@ -1,7 +1,6 @@
 @import "../mixins.scss";
 
 .reviews {
-  @include body-font-family();
   @include container();
   padding-bottom: 44px;
 }
