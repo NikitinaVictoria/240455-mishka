@@ -12,6 +12,14 @@
   margin-top: $margin-t;
   padding-right: $padding-r;
   padding-left: $padding-l;
+
+  @media #{min-width: 768px} {
+  width: 695px;
+  }
+
+  @media #{min-width: 1150px} {
+  width: 1050px;
+  }
 }
 
 @mixin unstyle-list {

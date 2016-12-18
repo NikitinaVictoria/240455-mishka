@@ -1,6 +1,6 @@
 @import "../mixins.scss";
 
-.intro {
+.header-intro {
   @include container();
   padding-top: 93px;
   padding-bottom: 120px;
@@ -8,7 +8,7 @@
   background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 50%;
 }
 
-.intro p {
+.header-intro p {
   font-size: 26px;
   line-height: 30px;
   text-align: center;
