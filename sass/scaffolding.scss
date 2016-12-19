@@ -23,6 +23,8 @@ body {
   color: #000000;
   font-weight: bold;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
