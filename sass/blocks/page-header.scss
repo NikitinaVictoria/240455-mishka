@@ -33,32 +33,20 @@
 
   .page-header__logo {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 22px;
+    left: 50px;
 
-    margin-right: 0;
-    margin-left: 50px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-
-    line-height: 0;
+    margin: 0;
+    padding: 0;
 
     transform: translate(0);
   }
 }
 
 @media #{$desktop-widths} {
-  .page-header {
-    position: relative;
-
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
   .page-header__logo {
-    position: absolute;
+    top: 9px;
     left: 50%;
-
-    transform: translateX(-50%);
+    transform: translate(-50%);
   }
 }
