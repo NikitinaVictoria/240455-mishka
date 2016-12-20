@@ -2,7 +2,6 @@
 
 .header-nav {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
   width: 20px;
@@ -75,7 +74,7 @@
   text-decoration: none;
 }
 
-.header-nav__nav-list-item-search input {
+.header-nav__nav-list-item--search input {
   align-self: center;
   padding-left: 46px;
 
@@ -87,11 +86,16 @@
   border: none;
 }
 
-.header-nav__nav-list-item-cart a::before {
+.header-nav__nav-list-item--cart a {
+  position: relative;
+}
+
+.header-nav__nav-list-item--cart a::before {
   content: "";
   position: absolute;
-  left: 30px;
+  left: 0;
 
+  display: block;
   width: 21px;
   height: 18px;
 
@@ -134,16 +138,107 @@
 
     transform: translateX(0);
   }
+
+  .header-nav__nav-list-item--delivery {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+  }
 }
 
 @media #{$tablet-widths} {
   .header-nav {
-    width: auto;
-    min-height: 70px;
-    margin: 0;
+    align-self: auto;
+    width: 100%;
+    height: 88px;
   }
+
   .header-nav__toggle {
     display: none;
+  }
+
+  .header-nav__nav-list {
+    position: static;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX(0);
+    li {
+      flex-shrink: 0;
+      height: 100%;
+      height: 88px;
+      padding-left: 0;
+
+      background-color: transparent;
+      border-top: none;
+    }
+  }
+
+  .header-nav__nav-list-item a {
+    padding-left: 0;
+  }
+
+  .header-nav__nav-list-item--search {
+    box-sizing: border-box;
+    width: 83px;
+    margin-left: 48%;
+
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    input {
+      width: 100%;
+      padding: 0;
+
+      font-size: 0;
+
+      background-position: center;
+    }
+  }
+
+  .header-nav__nav-list-item--cart {
+    order: 1;
+    a {
+      padding-left: 82px;
+    }
+    a::before {
+      left: 32px;
+    }
+  }
+
+  .header-nav__nav-list-item--catalog {
+    order: 2;
+    a {
+      font-size: 15px;
+    }
+  }
+
+  .header-nav__nav-list-item--order {
+    order: 3;
+    a {
+      font-size: 15px;
+    }
+  }
+
+  .header-nav__nav-list-item--delivery {
+    order: 4;
+    span {
+      align-self: center;
+
+      font-weight: normal;
+      font-size: 15px;
+    }
   }
 }
 

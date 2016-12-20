@@ -10,12 +10,13 @@
       <h1 class="visually-hidden">Мишка</h1>
       <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
-        <button class="header-nav__button header-nav__button--hamburger" type="button"></button>
+        <button class="header-nav__toggle" type="button"></button>
         <ul class="header-nav__nav-list">
-          <li class="header-nav__nav-list-item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="header-nav__nav-list-item"><a>Вязание на заказ</a></li>
-          <li class="header-nav__nav-list-item-search"><input type="text" name="site-search" value="Поиск по сайту"></li>
-          <li class="header-nav__nav-list-item-cart header-nav__nav-list-item-cart--not-empty"><a href="">Корзина: пока пуста</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--catalog"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--order"><a>Вязание на заказ</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--search"><input type="text" name="site-search" value="Поиск по сайту"></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--cart"><a href="">Корзина: пока пуста</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--delivery"><span>Бесплатная доставка по России</span></li>
         </ul>
       </nav>
     </header>
@@ -83,5 +84,21 @@
         <a href="https://htmlacademy.ru" class="page-footer__copyright-link">htmlacademy</a>
       </section>
     </footer>
+    <script>
+      var navHeader = document.querySelector('.header-nav');
+      var navToggle = document.querySelector('.header-nav__toggle');
+
+      navHeader.classList.remove('header-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navHeader.classList.contains('header-nav--closed')) {
+          navHeader.classList.remove('header-nav--closed');
+          navHeader.classList.add('header-nav--opened');
+        } else {
+          navHeader.classList.add('header-nav--closed');
+          navHeader.classList.remove('header-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

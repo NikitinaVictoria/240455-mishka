@@ -13,6 +13,7 @@
   margin-left: 50%;
   padding-top: 22px;
   padding-bottom: 22px;
+
   line-height: 0;
 
   transform: translate(-50%);
@@ -25,12 +26,24 @@
 
 @media #{$tablet-widths} {
   .page-header {
-    padding-right: 50px;
+    flex-wrap: nowrap;
+    padding-right: 35px;//минус 15px - ширина полосы прокрутки
     padding-left: 50px;
   }
+
   .page-header__logo {
-    margin-left: 0;
-    padding-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin-right: 0;
+    margin-left: 50px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    line-height: 0;
+
+    transform: translate(0);
   }
 }
 
