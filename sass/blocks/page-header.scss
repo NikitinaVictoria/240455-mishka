@@ -4,8 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding-right: 13px;//минус 13px - ширина полосы прокрутки
-  padding-left: 30px;
+  @include container();
 }
 
 .page-header__logo {
@@ -27,8 +26,6 @@
 @media #{$tablet-widths} {
   .page-header {
     flex-wrap: nowrap;
-    padding-right: 35px;//минус 15px - ширина полосы прокрутки
-    padding-left: 50px;
   }
 
   .page-header__logo {

@@ -17,14 +17,28 @@
   &--toys {
     background-color: #56c3b2;
   }
+  a {
+    width: 110px;
+    margin-left: 30px;
+
+    font-size: 19px;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 
-.main-menu__item-wrapper {
-  width: 110px;
-  margin-left: 30px;
+@media #{$tablet-widths} {
+  .main-menu {
+    flex-wrap: nowrap;
+    @include container();
+  }
 
-  font-size: 19px;
-  line-height: 24px;
-  color: #ffffff;
-  text-decoration: none;
+  .main-menu__item {
+    height: 119px;
+  }
+
+  .main-menu__item a {
+    margin-left: 38px;
+  }
 }

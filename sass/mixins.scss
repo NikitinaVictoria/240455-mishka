@@ -1,11 +1,11 @@
 @import "variables.scss";
 
 @mixin container() {
-  width: 320px;
+  width: 260px;
   margin: 0 auto;
 
   @media #{$tablet-widths} {
-  width: 695px;
+  width: 668px;
   }
 
   @media #{$desktop-widths} {
