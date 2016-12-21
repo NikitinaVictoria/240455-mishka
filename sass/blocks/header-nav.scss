@@ -139,7 +139,9 @@
     transform: translateX(0);
   }
 
-  .header-nav__nav-list-item--delivery {
+  .header-nav__nav-list-item--delivery,
+  .header-nav__nav-list-item--sale,
+  .header-nav__nav-list-item--new {
     position: absolute;
 
     width: 1px;
@@ -237,6 +239,23 @@
       font-weight: normal;
       font-size: 15px;
     }
+  }
+}
+
+@media #{$tablet-widths-only} {
+  .header-nav__nav-list-item--sale,
+  .header-nav__nav-list-item--new {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
   }
 }
 
