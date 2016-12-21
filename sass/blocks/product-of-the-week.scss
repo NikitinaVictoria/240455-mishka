@@ -5,15 +5,16 @@
   @include container();
 }
 
-.product-of-the-week__title {
+.product-of-the-week__title-main {
   font-size: 25px;
   color: #000000;
 }
 
-.product-of-the-week__label {
+.product-of-the-week__title-note {
   font-size: inherit;
   line-height: 16px;
   color: #63d1bb;
+  text-transform: uppercase;
 }
 
 .product-of-the-week__description,
@@ -45,9 +46,122 @@
   font-size: 15px;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 .product-of-the-week__order {
   @include btn;
+}
+
+@media #{$tablet-widths} {
+  .product-of-the-week {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 508px;
+  }
+
+  .product-of-the-week__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 55px;
+  }
+
+  .product-of-the-week__title-main {
+    margin: 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .product-of-the-week__title-note {
+    width: 78px;
+    margin-right: 27px;
+
+    text-align: center;
+  }
+
+  .product-of-the-week__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 312px;
+  }
+
+  .product-of-the-week__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-of-the-week__description-intro {
+    width: 285px;
+    margin: 0;
+    padding-bottom: 25px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product-of-the-week__picture {
+    width: 333px;
+    height: 404px;
+  }
+
+  .product-of-the-week__characteristics {
+    width: 291px;
+    margin-bottom: 57px;
+    p {
+      margin: 0;
+
+      line-height: 39px;
+
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .product-of-the-week__characteristic-value {
+    width: 193px;
+  }
+
+  .product-of-the-week__price {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .product-of-the-week__order {
+    width: 288px;
+
+    font-weight: bold;
+  }
+}
+
+
+@media #{$desktop-widths} {
+
+
+  .product-of-the-week__title {
+    width: 100%;
+  }
+
+  .product-of-the-week__title-main {
+    order: 1;
+    position: relative;
+    z-index: 2;
+  }
+
+  .product-of-the-week__info {
+
+  }
+  .product-of-the-week__picture {
+    width: 50%;
+    height: 636px;
+    align-self: center;
+    position: relative;
+    z-index: 1;
+  }
+
 }

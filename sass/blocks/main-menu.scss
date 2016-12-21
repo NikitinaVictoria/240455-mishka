@@ -31,6 +31,8 @@
 @media #{$tablet-widths} {
   .main-menu {
     flex-wrap: nowrap;
+    margin-bottom: 55px;
+
     @include container();
   }
 
