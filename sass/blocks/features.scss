@@ -24,6 +24,7 @@
   .features {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 25px;
   }
 
   .features__title {
@@ -78,25 +79,32 @@
 }
 
 @media #{$desktop-widths} {
+
   .features__title {
     font-size: 53px;
     line-height: 57px;
+    padding-left: 175px;
+  }
+
+  .features__list {
+    padding-left: 175px;
+
   }
 
   .features__list-item {
-    width: 525px;
-    padding-right: 25%;
+    width: 350px;
+    padding-right: 10%;
   }
 
   .features__list-item--materials {
-    padding-right: 30%;
+    padding-right: 15%;
   }
 
   .features__list-item--likes {
-    padding-right: 27%;
+    padding-right: 15%;
   }
 
   .features__list-item--national {
-    padding-right: 20%;
+    padding-right: 5%;
   }
 }
