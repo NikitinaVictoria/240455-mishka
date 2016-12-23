@@ -1,25 +1,22 @@
 @import "../mixins.scss";
 
 .item {
-  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
 
-  border: 1px solid #ececec;
-  @include container();
+  border: 1px solid $border-color;
 }
 
-.item__link {
-  display: block;
-
-  text-decoration: none;
-}
 
 .item__photo {
-  margin-bottom: 31px;
+  margin-bottom: 18px;
 }
 
 .item__title {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   margin-left: 30px;
 
   font-size: 17px;
@@ -28,9 +25,9 @@
 }
 
 .item__description {
-  margin-right: 30px;
+  margin-top: 5px;
   margin-left: 30px;
-  padding-bottom: 28px;
+  padding-bottom: 19px;
 
   font-weight: normal;
   font-size: 13px;
@@ -39,8 +36,12 @@
   border-bottom: 1px solid #ececec;
 }
 
+.item__title--toys-basket {
+  width: 174px;
+}
+
 .item__price {
-  margin-top: 22px;
+  margin-top: 6px;
   margin-left: 30px;
 
   font-size: 15px;

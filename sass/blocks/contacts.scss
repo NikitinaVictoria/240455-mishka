@@ -111,8 +111,6 @@
   }
 }
 
-
-
 @media #{$desktop-widths} {
   .contacts {
     display: block;
@@ -130,18 +128,18 @@
     margin-top: 60px;
     padding-top: 9px;
     padding-bottom: 17px;
-    padding-left: 225px;
+    padding-left: 215px;
 
     font-size: 53px;
     line-height: 57px;
 
-    background-position: 113px center;
+    background-position: 105px center;
   }
 
   .contacts__info {
     flex-direction: column;
     width: 350px;
-    padding-left: 225px;
+    padding-left: 215px;
   }
 
   .contacts__section-title--email {
@@ -157,6 +155,7 @@
     width: 525px;
     height: 457px;
     margin-bottom: 0;
+    margin-right: 40px;
 
     background-position: -105px;
   }
@@ -164,6 +163,6 @@
   .contacts__write-us {
     clear: left;
     margin-right: 0;
-    margin-left: 225px;
+    margin-left: 215px;
   }
 }

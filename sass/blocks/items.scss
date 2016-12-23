@@ -1,0 +1,9 @@
+@import "../mixins.scss";
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+
+  @include container();
+}

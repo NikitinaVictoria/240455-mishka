@@ -28,6 +28,8 @@
     flex-wrap: nowrap;
   }
 
+
+
   .page-header__logo {
     position: absolute;
     top: 22px;
@@ -45,5 +47,11 @@
     top: 9px;
     left: 50%;
     transform: translate(-50%);
+  }
+
+  .page-header__logo {
+    display: flex;
+    order: 2;
+
   }
 }
