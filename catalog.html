@@ -12,10 +12,12 @@
       <nav class="header-nav header-nav--closed header-nav--nojs">
         <button class="header-nav__toggle" type="button"></button>
         <ul class="header-nav__nav-list">
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--catalog"><a>Каталог товаров</a></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--order"><a href="form.html">Вязание на заказ</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--catalog"><a class="header-nav__nav-list-link header-nav__nav-list-link--catalog" href="">Каталог товаров</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--order"><a class="header-nav__nav-list-link header-nav__nav-list-link--order" href="form.html">Вязание на заказ</a></li>
           <li class="header-nav__nav-list-item header-nav__nav-list-item--search"><input type="text" name="site-search" value="Поиск по сайту"></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--cart"><a href="">Корзина: пока пуста</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--cart"><a class="header-nav__nav-list-link header-nav__nav-list-link--cart" href="#">Корзина: пока пуста</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--new"><a class="header-nav__nav-list-link header-nav__nav-list-link--new" href="#">Новые поступления</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--sale"><a class="header-nav__nav-list-link header-nav__nav-list-link--sale" href="#">Распродажа</a></li>
           <li class="header-nav__nav-list-item header-nav__nav-list-item--delivery"><span>Бесплатная доставка по России</span></li>
         </ul>
       </nav>
@@ -56,15 +58,18 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__social">
-        <a class="page-footer__social-link page-footer__social-link--in" href="">Мы в Инстаграме</a>
-        <a class="page-footer__social-link page-footer__social-link--fb" href="">Мы в Фейсбуке</a>
-        <a class="page-footer__social-link page-footer__social-link--tw" href="">Мы в Твиттере</a>
-      </section>
-      <section class="page-footer__copyright">
-        <span>Разработано</span>
-        <a href="https://htmlacademy.ru" class="page-footer__copyright-link">htmlacademy</a>
-      </section>
+      <div class="page-footer__container">
+        <a class="page-logo__footer" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
+        <section class="page-footer__social">
+          <a class="page-footer__social-link page-footer__social-link--in" href="">Мы в Инстаграме</a>
+          <a class="page-footer__social-link page-footer__social-link--fb" href="">Мы в Фейсбуке</a>
+          <a class="page-footer__social-link page-footer__social-link--tw" href="">Мы в Твиттере</a>
+        </section>
+        <section class="page-footer__copyright">
+          <span class="page-footer__copyright-note">Разработано</span>
+          <a href="https://htmlacademy.ru" class="page-footer__copyright-link">htmlacademy</a>
+        </section>
+      </div>
     </footer>
     <div class="modal-content">
       <h1 class="modal-content__title">Добавить в корзину</h1>

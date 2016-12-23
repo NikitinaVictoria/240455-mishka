@@ -5,34 +5,39 @@
   justify-content: center;
   height: 283px;
 
-  background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 50%;
-  background-size: cover;
+  background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 20%;
+  background-size: inherit;
   border-top: 1px solid #ececec;
 }
 
 .intro p {
-  width: 240px;
-  margin-top: 22%;
+  width: 250px;
+  margin-top: 23%;
 
-  font-size: 26px;
+  font-size: 27px;
   text-align: center;
 }
 
 @media #{$tablet-widths} {
   .intro {
     height: 626px;
-  }
-  .intro p {
-    width: auto;
 
-    font-size: 43px;
-    line-height: 50px;
+    background: url("../img/hero-desktop.jpg")  40% 0;
+    p {
+      width: auto;
+      margin-top: 20.5%;
+
+      font-size: 43px;
+      line-height: 50px;
+    }
   }
 }
 
 @media #{$desktop-widths} {
   .intro {
     height: 626px;
+
+    background: url("../img/hero-desktop.jpg") no-repeat 50% 0;
   }
 
   .intro p {

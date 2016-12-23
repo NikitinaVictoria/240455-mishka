@@ -1,24 +1,110 @@
 @import "../mixins.scss";
 
 .page-footer {
-  background-color: #f1f1f1;
+  margin-top: 39px;
+
+  background-color: $bg-lightgrey;
 }
 
-.page-footer__copyright span {
-  font-size: 19px;
-  line-height: 18px;
+.page-footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include container();
 }
 
 .page-footer__social {
-  @include container();
-  padding-top: 24px;
-  padding-bottom: 29px;
-  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 80px;
 
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.page-footer__social-link {
+  margin-right: 40px;
+
+  font-size: 0;
+}
+
+.page-footer__social-link--in {
+  width: 22px;
+  height: 21px;
+
+  background-image: url("../img/icon-insta.svg");
+}
+
+.page-footer__social-link--fb {
+  width: 15px;
+  height: 29px;
+
+  background-image: url("../img/icon-fb.svg");
+}
+
+.page-footer__social-link--tw {
+  width: 24px;
+  height: 20px;
+  margin-right: 0;
+
+  background-image: url("../img/icon-twitter.svg");
 }
 
 .page-footer__copyright {
-  @include container();
-  padding-top: 22px;
-  padding-bottom: 22px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 79px;
+}
+
+.page-footer__copyright-note {
+  margin-right: 30px;
+
+  font-size: 19px;
+  line-height: 18px;
+  vertical-align: baseline;
+}
+
+.page-footer__copyright-link {
+  width: 27px;
+  height: 34px;
+
+  font-size: 0;
+
+  background-image: url("../img/logo-htmlacademy.svg");
+}
+
+@media #{$mobile-widths-only} {
+  .page-logo__footer {
+    display: none;
+  }
+}
+
+@media #{$tablet-widths} {
+  .page-footer__container {
+    justify-content: space-between;
+    margin-top: 31.5px;
+    margin-bottom: 31.5px;
+  }
+
+  .page-footer {
+    margin-top: 58px;
+  }
+
+  .page-logo__footer {
+    align-self: center;
+    width: 184px;
+  }
+
+  .page-footer__social {
+    border-bottom: none;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-footer {
+    margin-top: 103px;
+  }
 }

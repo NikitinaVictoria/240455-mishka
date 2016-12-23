@@ -15,21 +15,35 @@
 }
 
 .features__list-item {
-  padding-top: 60px;
+  margin-bottom: 25px;
+  padding-top: 56px;
+  padding-right: 60px;
 
   line-height: 21px;
+}
+
+.features__list-item--materials {
+  padding-right: 80px;
+}
+
+.features__list-item--hand-made {
+  padding-right: 40px;
+}
+
+.features__list-item--national {
+  padding-right: 0;
 }
 
 @media #{$tablet-widths} {
   .features {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 25px;
+    padding-bottom: 29px;
   }
 
   .features__title {
     width: 100%;
-    margin-top: 93px;
+    margin-top: 17px;
     margin-bottom: 46px;
 
     font-size: 43px;
@@ -44,7 +58,7 @@
   .features__list-item {
     box-sizing: border-box;
     width: 334px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     padding-top: 56px;
     padding-right: 16%;
 
@@ -78,17 +92,21 @@
   }
 }
 
+
 @media #{$desktop-widths} {
+  .features {
+    padding-bottom: 38px;
+  }
 
   .features__title {
+    padding-left: 175px;
+
     font-size: 53px;
     line-height: 57px;
-    padding-left: 175px;
   }
 
   .features__list {
     padding-left: 175px;
-
   }
 
   .features__list-item {
