@@ -7,3 +7,10 @@
 
   @include container();
 }
+
+@media #{$tablet-widths} {
+  .items {
+    padding-top: 80px;
+  }
+
+}

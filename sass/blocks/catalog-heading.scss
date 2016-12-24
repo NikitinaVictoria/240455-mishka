@@ -10,5 +10,21 @@
 .catalog-heading h1 {
   font-size: 27px;
   text-align: center;
+
   @include container();
+}
+
+
+@media #{$tablet-widths} {
+  .catalog-heading {
+    padding-top: 96px;
+    padding-bottom: 79px;
+  }
+
+  .catalog-heading h1 {
+    padding-left: 10px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
