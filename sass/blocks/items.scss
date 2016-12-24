@@ -14,3 +14,14 @@
   }
 
 }
+
+@media #{$desktop-widths} {
+  .items {
+    justify-content: space-between;
+    // flex-wrap: nowrap;
+    padding-top: 128px;
+}
+
+
+
+}

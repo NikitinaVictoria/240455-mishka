@@ -28,3 +28,17 @@
     line-height: 50px;
   }
 }
+
+@media #{$desktop-widths} {
+  .catalog-heading {
+    padding-top: 96px;
+    padding-bottom: 103px;
+  }
+
+  .catalog-heading h1 {
+
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

@@ -104,7 +104,6 @@
 
   .item__price {
     width: 100%;
-    margin-top: 100%;
     margin-top: 143px;
     margin-left: 0;
     padding-top: 22px;
@@ -117,5 +116,30 @@
 
   .item__price--toys-basket {
     margin-top: 117px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .item {
+    flex-wrap: wrap;
+    width: 316px;
+    padding-bottom: 25px;
+  }
+
+  .item__photo {
+    height: 462px;
+  }
+
+
+  .item__price {
+    margin-top: 5px;
+  }
+
+  .item__description--toys-basket {
+    padding-bottom: 15px;
+  }
+
+  .item__price--toys-basket {
+    margin-top: 0;
   }
 }
