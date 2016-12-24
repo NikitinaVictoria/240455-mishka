@@ -94,12 +94,19 @@
 @media #{$desktop-widths} {
   .production {
     display: block;
+
+    @include clearfix();
   }
 
   .production__title {
     float: right;
+    box-sizing: border-box;
     width: 352px;
     margin: 0;
+    margin-top: 37px;
+    padding-top: 63px;
+    padding-right: 100px;
+    padding-left: 65px;
   }
 
   .production__video {
@@ -109,15 +116,18 @@
   }
 
   .production__description {
-    order: 2;
     float: right;
+    box-sizing: border-box;
     width: 352px;
     margin: 0;
+    margin-top: 33px;
+    padding-left: 65px;
   }
 
   .production__order {
-    order: 3;
     float: right;
-    width: 352px;
+    width: 230px;
+    margin-top: 46px;
+    margin-right: 55px;
   }
 }
