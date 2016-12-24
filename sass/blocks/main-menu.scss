@@ -17,7 +17,7 @@
   &--toys {
     background-color: #56c3b2;
   }
-  a {
+  div {
     box-sizing: border-box;
     padding-right: 100px;
 
@@ -40,34 +40,34 @@
   }
 
   .main-menu__item {
-    height: 119px;
     width: 334px;
+    height: 119px;
   }
 
-  .main-menu__item a {
+  .main-menu__item div {
     margin-left: 38px;
+
     font-size: 20px;
     line-height: 30px;
   }
 
-  .main-menu__item--toys a {
+  .main-menu__item--toys div {
     margin-left: 38px;
     padding-right: 150px;
   }
 }
 
 @media #{$desktop-widths} {
-
   .main-menu {
     padding-bottom: 0;
-    }
-
-  .main-menu__item {
-    margin-bottom: 117px;
-    width: 525px;
   }
 
-  .main-menu__item a {
+  .main-menu__item {
+    width: 525px;
+    margin-bottom: 117px;
+  }
+
+  .main-menu__item div {
     margin-right: 200px;
   }
 }
