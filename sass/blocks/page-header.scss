@@ -1,16 +1,58 @@
 @import "../mixins.scss";
 
 .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   @include container();
 }
 
-.visually-hidden {
-  position: absolute;
+.page-header__logo {
+  margin-right: auto;
+  margin-left: 50%;
+  padding-top: 22px;
+  padding-bottom: 22px;
 
-  text-indent: 9999px;
+  line-height: 0;
+
+  transform: translate(-50%);
 }
 
-.page-header__logo {
-  text-align: center;
-  display: block;
+.page-header__logo img {
+  width: 86px;
+  height: 35px;
+}
+
+@media #{$tablet-widths} {
+  .page-header {
+    flex-wrap: nowrap;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 22px;
+    left: 50px;
+
+    margin: 0;
+    padding: 0;
+
+    width: 86px;
+    height: 35px;
+
+    transform: translate(0);
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-header__logo {
+    top: 9px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .page-header__logo {
+    display: flex;
+    order: 2;
+
+  }
 }

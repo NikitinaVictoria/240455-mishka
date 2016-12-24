@@ -1,15 +1,13 @@
 @import "../mixins.scss";
 
 .form-heading {
-  @include container;
+  @include container();
   padding-bottom: 109px;
   padding-top: 76px;
 }
 
 .form-heading h1 {
   font-size: 27px;
-  line-height: 30px;
   color: #231f20;
-  @include body-font-family;
   margin: 0;
 }

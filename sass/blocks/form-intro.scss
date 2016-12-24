@@ -1,8 +1,7 @@
 @import "../mixins.scss";
 
 .form-intro {
-  @include container;
-  @include body-font-family;
+  @include container();
   margin-top: 0;
   font-size: 13px;
   line-height: 24px;

@@ -1,17 +1,16 @@
 @import "variables.scss";
 
-@mixin body-font-family() {
-  font-weight: bold;
-  font-family: $font-family;
-}
-
-@mixin container($padding-r: 30px, $padding-l: 30px, $width: 320px, $margin-t: 0) {
-  box-sizing: border-box;
-  width: $width;
+@mixin container() {
+  width: 260px;
   margin: 0 auto;
-  margin-top: $margin-t;
-  padding-right: $padding-r;
-  padding-left: $padding-l;
+
+  @media #{$tablet-widths} {
+  width: 668px;
+  }
+
+  @media #{$desktop-widths} {
+  width: 1050px;
+  }
 }
 
 @mixin unstyle-list {
@@ -27,7 +26,7 @@
     width: $width;
 
     font-size: 17px;
-    line-height: 52px;
+    line-height: 48px;
     text-align: center;
     color: #444444;
     text-transform: uppercase;
@@ -36,3 +35,12 @@
     border: 2px solid #444444;
     background-color: transparent;
   }
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}

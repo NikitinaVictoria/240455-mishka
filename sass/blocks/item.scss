@@ -1,27 +1,28 @@
 @import "../mixins.scss";
 
 .item {
-  padding-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
 
-  border: 1px solid #ececec;
-
-  @include body-font-family;
-  @include container(0, 0, 260px, 30px);
+  border: 1px solid $border-color;
 }
 
-.item__link {
-  display: block;
-
-  text-decoration: none;
-}
 
 .item__photo {
-  margin-bottom: 31px;
+  margin-bottom: 18px;
+}
+
+.item__info {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .item__title {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   margin-left: 30px;
 
   font-size: 17px;
@@ -30,22 +31,116 @@
 }
 
 .item__description {
+  margin-top: 5px;
   margin-right: 30px;
   margin-left: 30px;
-  padding-bottom: 28px;
+  padding-bottom: 19px;
 
   font-weight: normal;
   font-size: 13px;
-  line-height: 30px;
   color: #444444;
 
   border-bottom: 1px solid #ececec;
 }
 
+.item__title--toys-basket {
+  width: 174px;
+}
+
 .item__price {
-  margin-top: 22px;
+  margin-top: 7px;
   margin-left: 30px;
 
   font-size: 15px;
   line-height: 24px;
+}
+
+@media #{$tablet-widths} {
+  .item {
+    flex-wrap: nowrap;
+    margin-bottom: 53px;
+    padding-bottom: 0;
+  }
+
+  .item__link {
+    line-height: 0;
+  }
+
+  .item__photo {
+    width: 334px;
+    height: 334px;
+    margin-bottom: 0;
+  }
+
+  .item__info {
+    align-content: flex-start;
+    box-sizing: border-box;
+    width: 333px;
+    height: 100%;
+    padding-right: 26px;
+    padding-left: 30px;
+  }
+
+  .item__title {
+    margin-top: 24px;
+    margin-left: 0;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .item__title--toys-basket {
+    width: 203px;
+  }
+
+  .item__description {
+    margin-left: 0;
+
+    font-size: 15px;
+    line-height: 30px;
+
+    border-bottom: none;
+  }
+
+  .item__price {
+    width: 100%;
+    margin-top: 143px;
+    margin-left: 0;
+    padding-top: 22px;
+
+    font-size: 17px;
+    line-height: 24px;
+
+    border-top: 1px solid $border-color;
+  }
+
+  .item__price--toys-basket {
+    margin-top: 117px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .item {
+    flex-wrap: wrap;
+    width: 316px;
+    padding-bottom: 25px;
+  }
+
+  .item__photo {
+    height: 462px;
+  }
+
+
+  .item__price {
+    margin-top: 5px;
+  }
+
+  .item__description--toys-basket {
+    padding-bottom: 15px;
+    margin-bottom: 0;
+  }
+
+  .item__price--toys-basket {
+    margin-top: 0;
+  }
 }

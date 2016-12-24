@@ -1,0 +1,27 @@
+@import "../mixins.scss";
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+
+  @include container();
+}
+
+@media #{$tablet-widths} {
+  .items {
+    padding-top: 80px;
+  }
+
+}
+
+@media #{$desktop-widths} {
+  .items {
+    justify-content: space-between;
+    // flex-wrap: nowrap;
+    padding-top: 128px;
+}
+
+
+
+}

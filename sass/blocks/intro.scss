@@ -1,17 +1,50 @@
 @import "../mixins.scss";
 
 .intro {
-  @include container();
-  padding-top: 93px;
-  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  height: 283px;
 
-  background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 50%;
+  background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 20%;
+  background-size: inherit;
+  border-top: 1px solid #ececec;
 }
 
 .intro p {
-  font-size: 26px;
-  line-height: 30px;
-  text-align: center;
+  width: 250px;
+  margin-top: 23%;
 
-  @include body-font-family();
+  font-size: 27px;
+  text-align: center;
+}
+
+@media #{$tablet-widths} {
+  .intro {
+    height: 626px;
+
+    background: url("../img/hero-desktop.jpg")  40% 0;
+    p {
+      width: auto;
+      margin-top: 20.5%;
+
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .intro {
+    height: 626px;
+
+    background: url("../img/hero-desktop.jpg") no-repeat 50% 0;
+  }
+
+  .intro p {
+    width: auto;
+    margin-top: 13.5%;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

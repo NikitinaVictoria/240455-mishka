@@ -8,14 +8,17 @@
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Мишка</h1>
-      <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
+      <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
-        <button class="header-nav__button header-nav__button--hamburger" type="button"></button>
+        <button class="header-nav__toggle" type="button"></button>
         <ul class="header-nav__nav-list">
-          <li class="header-nav__nav-list-item"><a>Каталог товаров</a></li>
-          <li class="header-nav__nav-list-item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="header-nav__nav-list-item-search"><input type="text" name="site-search" value="Поиск по сайту"></li>
-          <li class="header-nav__nav-list-item-cart header-nav__nav-list-item-cart--not-empty"><a href="">Корзина: пока пуста</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--catalog"><a class="header-nav__nav-list-link header-nav__nav-list-link--catalog" href="">Каталог товаров</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--order"><a class="header-nav__nav-list-link header-nav__nav-list-link--order" href="form.html">Вязание на заказ</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--search"><input type="text" name="site-search" value="Поиск по сайту"></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--cart"><a class="header-nav__nav-list-link header-nav__nav-list-link--cart" href="#">Корзина: пока пуста</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--new"><a class="header-nav__nav-list-link header-nav__nav-list-link--new" href="#">Новые поступления</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--sale"><a class="header-nav__nav-list-link header-nav__nav-list-link--sale" href="#">Распродажа</a></li>
+          <li class="header-nav__nav-list-item header-nav__nav-list-item--delivery"><span>Бесплатная доставка по России</span></li>
         </ul>
       </nav>
     </header>
@@ -23,30 +26,38 @@
       <div class="catalog-heading">
         <h1>Каталог товаров</h1>
       </div>
-      <article class="item item--rabbit">
-        <a class="item__link" href="">
-          <img class="item__photo" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="">
-          <h2 class="item__title">Зайчик-попрыгайчик</h2>
-        </a>
-        <p class="item__description">Рост 30 см, вес 200 г</p>
-        <div class="item__price">1 200 руб.<a href=""></a></div>
-      </article>
-      <article class="item item--underwear-basket">
-      <a class="item__link" href="">
-        <img class="item__photo" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="">
-        <h2 class="item__title">Корзинка для белья</h2>
-      </a>
-        <p class="item__description">Диаметр 15 см, высота 10 см</p>
-        <div class="item__price">690 руб.<a href=""></a></div>
-      </article>
-      <article class="item item--toys-basket">
-        <a class="item__link" href="">
-          <img class="item__photo" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="">
-          <h2 class="item__title">Большая корзинка для игрушек</h2>
-        </a>
-        <p class="item__description">Диаметр 30 см, высота 30 см</p>
-        <div class="item__price">1 500 руб.<a href=""></a></div>
-      </article>
+      <section class="items">
+        <article class="item item--rabbit">
+          <a class="item__link item__link--rabbit" href="">
+            <img class="item__photo item__photo--rabbit" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="">
+          </a>
+          <div class="item__info item__info--rabbit">
+            <a class="item__title item__title--rabbit" href="">Зайчик-попрыгайчик</a>
+            <p class="item__description item__description--rabbit">Рост 30 см, вес 200 г</p>
+            <div class="item__price item__price--rabbit">1 200 руб.<a href=""></a></div>
+          </div>
+        </article>
+        <article class="item item--underwear-basket">
+          <a class="item__link item__link--underwear-basket" href="">
+            <img class="item__photo item__photo--underwear-basket" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="">
+          </a>
+          <div class="item__info item__info--underwear-basket">
+            <a class="item__title item__title--underwear-basket" href="">Корзинка для белья</a>
+            <p class="item__description item__description--underwear-basket">Диаметр 15 см, высота 10 см</p>
+            <div class="item__price item__price--underwear-basket">690 руб.<a href=""></a></div>
+          </div>
+        </article>
+        <article class="item item--toys-basket">
+          <a class="item__link item__link--toys-basket" href="">
+            <img class="item__photo item__photo--toys-basket" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="">
+          </a>
+          <div class="item__info item__info--toys-basket">
+            <a class="item__title item__title--toys-basket" href="">Большая корзинка для игрушек</a>
+            <p class="item__description item__description--toys-basket">Диаметр 30 см, высота 30 см</p>
+            <div class="item__price item__price--toys-basket">1 500 руб.<a href=""></a></div>
+          </div>
+        </article>
+      </section>
       <section class="production">
         <h2 class="production__title">Процесс производства</h2>
         <video class="production__video" src="videofile.ogg" autoplay poster="img/video-mobile@1x.jpg" width="260" height="150"></video>
@@ -55,15 +66,18 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__social">
-        <a class="page-footer__social-link page-footer__social-link--in" href="">Мы в Инстаграме</a>
-        <a class="page-footer__social-link page-footer__social-link--fb" href="">Мы в Фейсбуке</a>
-        <a class="page-footer__social-link page-footer__social-link--tw" href="">Мы в Твиттере</a>
-      </section>
-      <section class="page-footer__copyright">
-        <span>Разработано</span>
-        <a href="https://htmlacademy.ru" class="page-footer__copyright-link">htmlacademy</a>
-      </section>
+      <div class="page-footer__container">
+        <a class="page-logo__footer" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
+        <section class="page-footer__social">
+          <a class="page-footer__social-link page-footer__social-link--in" href="">Мы в Инстаграме</a>
+          <a class="page-footer__social-link page-footer__social-link--fb" href="">Мы в Фейсбуке</a>
+          <a class="page-footer__social-link page-footer__social-link--tw" href="">Мы в Твиттере</a>
+        </section>
+        <section class="page-footer__copyright">
+          <span class="page-footer__copyright-note">Разработано</span>
+          <a href="https://htmlacademy.ru" class="page-footer__copyright-link">htmlacademy</a>
+        </section>
+      </div>
     </footer>
     <div class="modal-content">
       <h1 class="modal-content__title">Добавить в корзину</h1>
@@ -78,5 +92,21 @@
         <button class="modal-content__btn" type="button">Добавить</button>
       </form>
     </div>
+    <script>
+      var navHeader = document.querySelector('.header-nav');
+      var navToggle = document.querySelector('.header-nav__toggle');
+
+      navHeader.classList.remove('header-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navHeader.classList.contains('header-nav--closed')) {
+          navHeader.classList.remove('header-nav--closed');
+          navHeader.classList.add('header-nav--opened');
+        } else {
+          navHeader.classList.add('header-nav--closed');
+          navHeader.classList.remove('header-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

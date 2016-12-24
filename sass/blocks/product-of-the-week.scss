@@ -1,22 +1,30 @@
 @import "../mixins.scss";
 
 .product-of-the-week {
+  padding-bottom: 48px;
+
   color: #444444;
 
-  @include body-font-family();
   @include container();
 }
 
-.product-of-the-week__title {
+.product-of-the-week__title-main {
+  margin-bottom: 0;
+  padding-top: 5px;
+
   font-size: 25px;
-  line-height: 30px;
   color: #000000;
 }
 
-.product-of-the-week__label {
-  font-size: 17px;
+.product-of-the-week__title-note {
+  font-size: inherit;
   line-height: 16px;
   color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.product-of-the-week__info {
+  margin-bottom: 17px;
 }
 
 .product-of-the-week__description,
@@ -27,30 +35,190 @@
 }
 
 .product-of-the-week__characteristics {
-  line-height: 20px;
   font-size: 0;
+  line-height: 20px;
 }
 
-.product-of-the-week__characteristics p {
+.product-of-the-week__characteristic {
   display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+
   font-size: 15px;
+
+  border-bottom: 1px solid $border-color;
 }
 
-.product-of-the-week__characteristic-name {
+.product-of-the-week__characteristic--name {
   width: 98px;
 }
 
-.product-of-the-week__characteristic-value {
+.product-of-the-week__characteristic--value {
   width: 162px;
 }
 
-.product-of-the-week__price {
-  font-size: 15px;
-  line-height: 20px;
-  text-align: center;
+.product-of-the-week__description {
   margin-bottom: 28px;
+}
+
+.product-of-the-week__picture {
+  margin-bottom: 16px;
+}
+
+.product-of-the-week__price {
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .product-of-the-week__order {
   @include btn;
+}
+
+@media #{$tablet-widths} {
+  .product-of-the-week {
+    margin-bottom: 52px;
+  }
+
+  .product-of-the-week__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 51px;
+  }
+
+  .product-of-the-week__title-main {
+    margin: 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .product-of-the-week__title-note {
+    width: 78px;
+    margin-right: 23px;
+
+    text-align: center;
+  }
+
+  .product-of-the-week__description {
+    float: left;
+    width: 50%;
+  }
+
+  .product-of-the-week__info {
+    width: 285px;
+    margin: 0;
+    padding-bottom: 38px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product-of-the-week__picture {
+    float: right;
+    width: 334px;
+    height: 404px;
+    padding-top: 9px;
+  }
+
+  .product-of-the-week__characteristics {
+    width: 291px;
+    margin-bottom: 27px;
+  }
+
+  .product-of-the-week__characteristic {
+    margin: 0;
+
+    line-height: 28px;
+  }
+
+  .product-of-the-week__characteristic--value {
+    width: 193px;
+  }
+
+  .product-of-the-week__order-details {
+    clear: left;
+    width: 50%;
+  }
+
+  .product-of-the-week__price {
+    margin-bottom: 35px;
+    padding-left: 76px;
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .product-of-the-week__order {
+    width: 292px;
+
+    font-weight: bold;
+  }
+}
+
+@media #{$desktop-widths} {
+  .product-of-the-week {
+    margin-bottom: 90px;
+  }
+
+  .product-of-the-week__title {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-of-the-week__title-note {
+    box-sizing: border-box;
+    width: 175px;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 58px;
+
+    text-align: center;
+  }
+
+  .product-of-the-week__title-main {
+    order: 1;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .product-of-the-week__description {
+    box-sizing: border-box;
+    padding-left: 175px;
+    margin-bottom: 0;
+  }
+
+  .product-of-the-week__info {
+    padding-bottom: 50px;
+  }
+
+  .product-of-the-week__characteristics {
+    width: 291px;
+    margin-bottom: 108px;
+  }
+
+  .product-of-the-week__order-details {
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 175px;
+  }
+
+  .product-of-the-week__price {
+    padding-left: 75px;
+
+    text-align: left;
+  }
+  .product-of-the-week__picture {
+    width: 525px;
+    height: 636px;
+    margin-top: -166px;
+  }
 }
