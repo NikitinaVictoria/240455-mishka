@@ -142,7 +142,7 @@ input[type="checkbox"] + label:active::before {
 }
 
 input[type="checkbox"]:checked + label::before {
-  background: url("../img/icon-tick.svg") no-repeat 50% 50%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMyLjY2NnB4IiBoZWlnaHQ9IjIyLjc0MnB4IiB2aWV3Qm94PSIwIDAgMzIuNjY2IDIyLjc0MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIuNjY2IDIyLjc0MiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQogIDxwb2x5Z29uIHBvaW50cz0iMzIuNjY2LDEuNDE0IDMxLjI1MiwwIDExLjMzOCwxOS45MTQgMS40MTQsOS45ODkgMCwxMS40MDMgOS45MjQsMjEuMzI4IDkuOTI0LDIxLjMyOCAxMS4zMzgsMjIuNzQyIDExLjMzOCwyMi43NDIgMTEuMzM5LDIyLjc0MiAxMi43NTMsMjEuMzI4IDEyLjc1MiwyMS4zMjggIi8+DQo8L3N2Zz4NCg==") no-repeat 50% 50%;
 }
 
 .form__title--color {
@@ -228,11 +228,14 @@ textarea {
 }
 
 .form__btn {
-  @include btn();
   @include container();
+  @include btn();
 }
 
 @media #{$tablet-widths} {
+  .form {
+    padding-bottom: 0;
+  }
   .form__title {
     box-sizing: border-box;
     width: 167px;
@@ -314,5 +317,177 @@ textarea {
   input[type="checkbox"] + label[for="black"],
   input[type="checkbox"] + label[for="gray"] {
     width: 240px;
+  }
+
+  .form__title--name {
+    padding-top: 68px;
+  }
+
+  .form__field--name {
+    padding-top: 65px;
+    padding-bottom: 26px;
+  }
+
+  input[type="text"]::-webkit-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="text"]:-ms-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="text"]:-moz-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+
+  //
+  input[type="tel"]::-webkit-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="tel"]:-ms-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="tel"]::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="tel"]:-moz-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+  //
+  input[type="email"]::-webkit-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="email"]:-ms-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="email"]::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="email"]:-moz-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+  //
+  textarea::-webkit-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  textarea:-ms-input-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  textarea::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  textarea:-moz-placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+  //
+  label[for="name"] + input {
+    width: 410px;
+    height: auto;
+    margin-bottom: 36px;
+    margin-left: 20px;
+    padding-bottom: 16px;
+    padding-left: 17px;
+  }
+
+  label[for="surname"] + input {
+    width: 355px;
+    height: auto;
+    margin-bottom: 40px;
+    margin-left: 26px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+
+  label[for="patronym"] + input {
+    width: 350px;
+    height: auto;
+    margin-left: 30px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+  }
+
+  .form__field--сеll {
+    padding-top: 50px;
+  }
+
+  .form__title--сеll {
+    padding-top: 70px;
+  }
+
+  input[type="tel"],
+  input[type="email"] {
+    padding-left: 15px;
+
+    background-color: $bg-lightgrey;
+  }
+
+  .form__title--email {
+    padding-top: 20px;
+  }
+
+  .form__field--email {
+    padding-bottom: 28px;
+  }
+
+  .form__title--extra {
+    padding-top: 68px;
+  }
+
+  .form__field--extra {
+    padding-top: 50px;
+  }
+
+  textarea {
+    width: 501px;
+    height: 142px;
+  }
+
+  .form__btn {
+    order: 0;
+    width: 230px;
+    height: 52px;
+    margin-top: 52px;
+    margin-left: 40px;
+  }
+
+  .form__note {
+    order: 1;
+    width: 345px;
+    padding-top: 62px;
+    padding-bottom: 0;
+    padding-left: 131px;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 }
