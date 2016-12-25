@@ -2,21 +2,37 @@
 
 .form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding-bottom: 13px;
+}
+
+.form__stretch {
+  width: 100%;
+}
+
+.form__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include container();
 }
 
 .form__field {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10px;
+  padding-top: 0;
+}
 
-  @include container();
+.form__title {
+  margin-top: 0;
 }
 
 .form__field--category {
-  padding-top: 0;
+  padding-top: 10px;
 }
+
+
+
 
 .form__field--color label {
   width: 100%;
@@ -26,19 +42,23 @@
   position: relative;
 
   width: 100%;
-  margin-top: 0;
+  padding-top: 10px;
 
   line-height: 16px;
   color: $azure;
   text-transform: uppercase;
 }
 
+.form__title--category {
+  margin-top: 0;
+  padding-top: 0;
+}
 
 @media #{$mobile-widths-only} {
   .form__title::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 75%;
     right: 0;
 
     width: 198px;
@@ -47,13 +67,17 @@
     background-color: $azure;
   }
 
+  .form__title--category::after {
+    top: 50%;
+  }
+
   .form__title--email::after {
     width: 179px;
   }
 }
 
 .form__title--category {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 label {
@@ -100,9 +124,7 @@ input[type="radio"]:checked + label::after {
   top: 12px;
   left: 12px;
 
-  width: 4px;
   width: 16px;
-  height: 4px;
   height: 16px;
 
   background-color: $azure;
@@ -194,9 +216,8 @@ textarea {
 }
 
 .form__note {
-  margin-top: 18px;
-  margin-top: 17px;
-  margin-bottom: 30px;
+  padding-top: 18px;
+  padding-bottom: 30px;
 
   font-weight: normal;
   font-size: 14px;
@@ -207,6 +228,91 @@ textarea {
 }
 
 .form__btn {
-  @include container();
   @include btn();
+  @include container();
+}
+
+@media #{$tablet-widths} {
+  .form__title {
+    box-sizing: border-box;
+    width: 167px;
+    padding-top: 48px;
+  }
+
+  .form__field {
+    width: 500px;
+  }
+
+  .form__stretch {
+    background-color: $bg-lightgrey;
+  }
+
+  .form__field--category {
+    align-content: flex-start;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 26px;
+  }
+
+  label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input[type="radio"] + label {
+    height: 45px;
+    margin-bottom: 16px;
+    padding-left: 82px;
+  }
+
+
+
+
+  input[type="radio"] + label::before {
+    top: 0;
+    left: 0;
+
+    width: 52px;
+    height: 53px;
+  }
+
+  input[type="radio"]:checked + label::after {
+    top: 16px;
+    left: 15px;
+
+    width: 22px;
+    height: 22px;
+  }
+
+  .form__field--color {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .form__title--color {
+    padding-top: 70px;
+  }
+
+  input[type="checkbox"] + label::before {
+    top: 0;
+    left: 0;
+
+    width: 58px;
+    height: 58px;
+  }
+
+  input[type="checkbox"] + label {
+    box-sizing: border-box;
+    width: 260px;
+    margin-bottom: 35px;
+    padding-top: 18px;
+    padding-left: 80px;
+  }
+
+  input[type="checkbox"] + label[for="orange"],
+  input[type="checkbox"] + label[for="black"],
+  input[type="checkbox"] + label[for="gray"] {
+    width: 240px;
+  }
 }
