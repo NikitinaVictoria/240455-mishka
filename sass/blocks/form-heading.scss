@@ -24,9 +24,19 @@
   }
 
   .form-heading h1 {
-    text-align: center;
     font-size: 43px;
     line-height: 50px;
+    text-align: center;
+  }
+}
+
+@media #{$desktop-widths} {
+  .form-heading h1 {
+    font-size: 53px;
+    line-height: 57px;
   }
 
+  .form-heading {
+    padding-bottom: 100px;
+  }
 }

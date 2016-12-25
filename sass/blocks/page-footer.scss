@@ -89,10 +89,6 @@
     margin-bottom: 31.5px;
   }
 
-  .page-footer {
-    margin-top: 58px;
-  }
-
   .page-logo__footer {
     align-self: center;
     width: 184px;
@@ -100,11 +96,5 @@
 
   .page-footer__social {
     border-bottom: none;
-  }
-}
-
-@media #{$desktop-widths} {
-  .page-footer {
-    margin-top: 103px;
   }
 }

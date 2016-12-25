@@ -20,3 +20,10 @@
     line-height: 30px;
   }
 }
+
+@media #{$desktop-widths} {
+  .form-intro {
+    width: 700px;
+    padding-top: 125px;
+  }
+}
