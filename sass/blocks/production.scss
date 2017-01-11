@@ -48,7 +48,7 @@
 
 @media #{$tablet-widths} {
   .production {
-    padding-bottom: 5px;
+    padding-bottom: 25px;
 
     border-top: transparent;
 
@@ -96,6 +96,7 @@
     display: block;
 
     @include clearfix();
+    padding-bottom: 70px;
   }
 
   .production__title {

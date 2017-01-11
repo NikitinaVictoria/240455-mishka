@@ -48,11 +48,9 @@
 .header-nav__nav-list {
   position: absolute;
   top: 79px;
-  left: 50%;
+  left: 0;
 
-  width: 320px;
-
-  transform: translateX(-50%);
+  width: 100%;
 
   @include unstyle-list();
 }

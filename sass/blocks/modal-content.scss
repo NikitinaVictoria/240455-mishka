@@ -1,16 +1,43 @@
 @import "../mixins.scss";
 
-.modal-content {
-  padding-top: 36px;
-  padding-bottom: 46px;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 
-  @include container();
+  width: 100%;
+  height: 100%;
+
+  background: #fefefe;
+  display: none;
+}
+
+.modal-content {
+  box-sizing: border-box;
+  width: 320px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 46px;
+  padding-left: 30px;
+
+  background-color: #ffffff;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-overlay-show {
+  display: block;
 }
 
 .modal-content__title {
-  width: 146px;
+  width: 150px;
   margin: 0 auto;
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 
   font-size: 25px;
   text-align: center;
@@ -22,12 +49,8 @@
   text-align: justify;
 }
 
-.modal-content__form input {
-  display: none;
-}
-
 .modal-content__form-title {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   font-weight: normal;
   font-size: 15px;
@@ -35,7 +58,11 @@
   color: #444444;
 }
 
-.modal-content__size {
+.modal-content__radio {
+  display: none;
+}
+
+.modal-content__radio + .modal-content__size {
   display: inline-block;
   box-sizing: border-box;
   width: 78px;
@@ -48,6 +75,15 @@
   color: #444444;
 
   border: 2px solid rgba(68, 68, 68, 0.1);
+  cursor: pointer;
+}
+
+.modal-content__size:hover {
+  border-color: rgba(68, 68, 68, 0.3);
+}
+
+.modal-content__radio:checked + .modal-content__size {
+  border-color: $azure;
 }
 
 .modal-content__btn {
@@ -62,4 +98,36 @@
 
   background-color: #63d1bb;
   border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content__form-title {
+    margin-top: 13px;
+}
+
+@media #{$tablet-widths} {
+
+  .modal-content {
+    width: 556px;
+    padding-left: 108px;
+    padding-right: 108px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+  }
+
+  .modal-content__radio + .modal-content__size {
+    width: 112px;
+    height: 52px;
+    text-align: center;
+    padding-left: 0;
+
+  }
+
+  .modal-content__btn {
+    margin-left: 46px;
+  }
+
 }

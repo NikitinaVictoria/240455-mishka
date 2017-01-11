@@ -34,7 +34,7 @@
           <div class="item__info item__info--rabbit">
             <a class="item__title item__title--rabbit" href="">Зайчик-попрыгайчик</a>
             <p class="item__description item__description--rabbit">Рост 30 см, вес 200 г</p>
-            <div class="item__price item__price--rabbit">1 200 руб.<a href=""></a></div>
+            <div class="item__price item__price--rabbit">1 200 руб.<a class="add-to-cart" href=""></a></div>
           </div>
         </article>
         <article class="item item--underwear-basket">
@@ -44,7 +44,7 @@
           <div class="item__info item__info--underwear-basket">
             <a class="item__title item__title--underwear-basket" href="">Корзинка для белья</a>
             <p class="item__description item__description--underwear-basket">Диаметр 15 см, высота 10 см</p>
-            <div class="item__price item__price--underwear-basket">690 руб.<a href=""></a></div>
+            <div class="item__price item__price--underwear-basket">690 руб.<a class="add-to-cart" href=""></a></div>
           </div>
         </article>
         <article class="item item--toys-basket">
@@ -54,7 +54,7 @@
           <div class="item__info item__info--toys-basket">
             <a class="item__title item__title--toys-basket" href="">Большая корзинка для игрушек</a>
             <p class="item__description item__description--toys-basket">Диаметр 30 см, высота 30 см</p>
-            <div class="item__price item__price--toys-basket">1 500 руб.<a href=""></a></div>
+            <div class="item__price item__price--toys-basket">1 500 руб.<a class="add-to-cart" href=""></a></div>
           </div>
         </article>
       </section>
@@ -62,7 +62,7 @@
         <h2 class="production__title">Процесс производства</h2>
         <video class="production__video" src="videofile.ogg" autoplay poster="img/video-mobile@1x.jpg" width="260" height="150"></video>
         <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__order btn" href="">Сделать заказ</a>
+        <a class="production__order btn add-to-cart" href="">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -79,32 +79,45 @@
         </section>
       </div>
     </footer>
-    <div class="modal-content">
-      <h1 class="modal-content__title">Добавить в корзину</h1>
-      <form action="#" class="modal-content__form">
-        <p class="modal-content__form-title">Выберите размер:</p>
-        <label class="modal-content__size" for="s-size">S</label>
-        <input id="s-size" type="radio" name="size" value="s">
-        <label class="modal-content__size" for="m-size">M</label>
-        <input id="m-size" type="radio" name="size" value="m">
-        <label class="modal-content__size" for="l-size">L</label>
-        <input id="l-size" type="radio" name="size" value="l">
-        <button class="modal-content__btn" type="button">Добавить</button>
-      </form>
-    </div>
+    <div class="modal-overlay">
+      <div class="modal-content">
+        <h1 class="modal-content__title">Добавить в корзину</h1>
+        <form action="#" class="modal-content__form">
+          <p class="modal-content__form-title">Выберите размер:</p>
+          <input class="modal-content__radio" id="s-size" type="radio" name="size" value="s">
+          <label class="modal-content__size" for="s-size">S</label>
+          <input class="modal-content__radio" id="m-size" type="radio" name="size" value="m">
+          <label class="modal-content__size" for="m-size">M</label>
+          <input class="modal-content__radio" id="l-size" type="radio" name="size" value="l">
+          <label class="modal-content__size" for="l-size">L</label>
+          <button class="modal-content__btn" type="button">Добавить</button>
+        </form>
+      </div>
     <script>
-      var navHeader = document.querySelector('.header-nav');
-      var navToggle = document.querySelector('.header-nav__toggle');
+      var navHeader = document.querySelector(".header-nav");
+      var navToggle = document.querySelector(".header-nav__toggle");
+      var AddToCart = document.querySelector(".add-to-cart");
+      var CartPopup = document.querySelector(".modal-overlay");
+      AddToCart.addEventListener("click", function(event) {
+        event.preventDefault();
+        CartPopup.classList.add("modal-overlay-show");
+        });
+        window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (CartPopup.classList.contains("modal-overlay-show")) {
+        CartPopup.classList.remove("modal-overlay-show");
+            }
+          }
+      });
+      navHeader.classList.remove("header-nav--nojs");
 
-      navHeader.classList.remove('header-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navHeader.classList.contains('header-nav--closed')) {
-          navHeader.classList.remove('header-nav--closed');
-          navHeader.classList.add('header-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navHeader.classList.contains("header-nav--closed")) {
+          navHeader.classList.remove("header-nav--closed");
+          navHeader.classList.add("header-nav--opened");
         } else {
-          navHeader.classList.add('header-nav--closed');
-          navHeader.classList.remove('header-nav--opened');
+          navHeader.classList.add("header-nav--closed");
+          navHeader.classList.remove("header-nav--opened");
         }
       });
     </script>

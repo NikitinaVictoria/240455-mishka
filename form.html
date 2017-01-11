@@ -31,9 +31,9 @@
         <div class="form__container">
           <p class="form__title form__title--category">Тип</p>
           <div class="form__field form__field--category">
-            <input id="accessory" name="category" type="radio" value="accessory" checked>
+            <input class="form__radio form__radio--category" id="accessory" name="category" type="radio" value="accessory" checked>
             <label for="accessory">Аксессуар для интерьера</label>
-            <input id="toy" name="category" type="radio" value="toy">
+            <input class="form__radio form__radio--accessory" id="toy" name="category" type="radio" value="toy">
             <label for="toy">Детская игрушка</label>
           </div>
         </div>
@@ -104,19 +104,20 @@
       </div>
     </footer>
     <script>
-      var navHeader = document.querySelector('.header-nav');
-      var navToggle = document.querySelector('.header-nav__toggle');
+      var navHeader = document.querySelector(".header-nav");
+      var navToggle = document.querySelector(".header-nav__toggle");
 
-      navHeader.classList.remove('header-nav--nojs');
+      navHeader.classList.remove("header-nav--nojs");
 
-      navToggle.addEventListener('click', function() {
-        if (navHeader.classList.contains('header-nav--closed')) {
-          navHeader.classList.remove('header-nav--closed');
-          navHeader.classList.add('header-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navHeader.classList.contains("header-nav--closed")) {
+          navHeader.classList.remove("header-nav--closed");
+          navHeader.classList.add("header-nav--opened");
         } else {
-          navHeader.classList.add('header-nav--closed');
-          navHeader.classList.remove('header-nav--opened');
+          navHeader.classList.add("header-nav--closed");
+          navHeader.classList.remove("header-nav--opened");
         }
+        });
       });
     </script>
   </body>

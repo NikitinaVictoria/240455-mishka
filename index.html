@@ -53,7 +53,7 @@
         <img class="product-of-the-week__picture" src="../img/triple-set-mobile@1x.jpg" width="260" height="315" alt="">
         <div class="product-of-the-week__order-details">
           <div class="product-of-the-week__price">Цена: 990 руб.</div>
-          <a class="product-of-the-week__order" href="">Заказать</a>
+          <a class="product-of-the-week__order add-to-cart" href="">Заказать</a>
         </div>
       </article>
       <section class="features">
@@ -112,34 +112,48 @@
         </section>
       </div>
     </footer>
-    <div class="modal-content">
-      <h1 class="modal-content__title">Добавить в корзину</h1>
-      <form action="#" class="modal-content__form">
-        <p class="modal-content__form-title">Выберите размер:</p>
-        <label class="modal-content__size" for="s-size">S</label>
-        <input id="s-size" type="radio" name="size" value="s">
-        <label class="modal-content__size" for="m-size">M</label>
-        <input id="m-size" type="radio" name="size" value="m">
-        <label class="modal-content__size" for="l-size">L</label>
-        <input id="l-size" type="radio" name="size" value="l">
-        <button class="modal-content__btn" type="button">Добавить</button>
-      </form>
+    <div class="modal-overlay">
+      <div class="modal-content">
+        <h1 class="modal-content__title">Добавить в корзину</h1>
+        <form action="#" class="modal-content__form">
+          <p class="modal-content__form-title">Выберите размер:</p>
+          <input class="modal-content__radio" id="s-size" type="radio" name="size" value="s">
+          <label class="modal-content__size" for="s-size">S</label>
+          <input class="modal-content__radio" id="m-size" type="radio" name="size" value="m">
+          <label class="modal-content__size" for="m-size">M</label>
+          <input class="modal-content__radio" id="l-size" type="radio" name="size" value="l">
+          <label class="modal-content__size" for="l-size">L</label>
+          <button class="modal-content__btn" type="button">Добавить</button>
+        </form>
+      </div>
     </div>
     <script>
-      var navHeader = document.querySelector('.header-nav');
-      var navToggle = document.querySelector('.header-nav__toggle');
+      var navHeader = document.querySelector(".header-nav");
+      var navToggle = document.querySelector(".header-nav__toggle");
+      var AddToCart = document.querySelector(".add-to-cart");
+      var CartPopup = document.querySelector(".modal-overlay");
+        AddToCart.addEventListener("click", function(event) {
+        event.preventDefault();
+        CartPopup.classList.add("modal-overlay-show");
+        });
+        window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (CartPopup.classList.contains("modal-overlay-show")) {
+        CartPopup.classList.remove("modal-overlay-show");
+            }
+          }
+      });
+      navHeader.classList.remove("header-nav--nojs");
 
-      navHeader.classList.remove('header-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navHeader.classList.contains('header-nav--closed')) {
-          navHeader.classList.remove('header-nav--closed');
-          navHeader.classList.add('header-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navHeader.classList.contains("header-nav--closed")) {
+          navHeader.classList.remove("header-nav--closed");
+          navHeader.classList.add("header-nav--opened");
         } else {
-          navHeader.classList.add('header-nav--closed');
-          navHeader.classList.remove('header-nav--opened');
+          navHeader.classList.add("header-nav--closed");
+          navHeader.classList.remove("header-nav--opened");
         }
       });
-    </script>
+  </script>
   </body>
 </html>

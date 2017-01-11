@@ -31,9 +31,6 @@
   padding-top: 10px;
 }
 
-
-
-
 .form__field--color label {
   width: 100%;
 }
@@ -90,7 +87,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="radio"] + label,
+.form__radio + label,
 input[type="checkbox"] + label {
   position: relative;
 
@@ -99,12 +96,12 @@ input[type="checkbox"] + label {
   cursor: pointer;
 }
 
-input[type="radio"] + label {
+.form__radio + label {
   height: 45px;
   padding-top: 15px;
 }
 
-input[type="radio"] + label::before {
+.form__radio + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -118,7 +115,7 @@ input[type="radio"] + label::before {
   border-radius: 50%;
 }
 
-input[type="radio"]:checked + label::after {
+.form__radio:checked + label::after {
   content: "";
   position: absolute;
   top: 12px;
@@ -131,12 +128,12 @@ input[type="radio"]:checked + label::after {
   border-radius: 50%;
 }
 
-input[type="radio"] + label:hover::before,
+.form__radio + label:hover::before,
 input[type="checkbox"] + label:hover::before {
   border-color: $azure;
 }
 
-input[type="radio"] + label:active::before,
+.form__radio + label:active::before,
 input[type="checkbox"] + label:active::before {
   border-color: rgba(68, 68, 68, 0.3);
 }
@@ -234,7 +231,7 @@ textarea {
 
 @media #{$tablet-widths} {
   .form {
-    padding-bottom: 0;
+    padding-bottom: 15px;
   }
   .form__title {
     box-sizing: border-box;
@@ -272,7 +269,7 @@ textarea {
 
 
 
-  input[type="radio"] + label::before {
+  .form__radio + label::before {
     top: 0;
     left: 0;
 
@@ -280,7 +277,7 @@ textarea {
     height: 53px;
   }
 
-  input[type="radio"]:checked + label::after {
+  .form__radio:checked + label::after {
     top: 16px;
     left: 15px;
 
@@ -579,9 +576,5 @@ textarea {
 
   .form__btn {
     margin-left: 217px;
-  }
-
-  .page-footer {
-    margin-top: 0;
   }
 }

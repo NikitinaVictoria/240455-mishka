@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  @include container();
+  @include container-fluid();
 }
 
 .page-header__logo {
@@ -16,6 +16,7 @@
   line-height: 0;
 
   transform: translate(-50%);
+  z-index: 10;
 }
 
 .page-header__logo img {
@@ -53,6 +54,5 @@
   .page-header__logo {
     display: flex;
     order: 2;
-
   }
 }
