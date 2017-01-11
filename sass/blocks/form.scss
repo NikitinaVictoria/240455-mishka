@@ -169,7 +169,7 @@ input[type="checkbox"] + label::before {
   margin-bottom: 28px;
 }
 
-input[type="text"],
+.form__section,
 input[type="tel"],
 input[type="email"],
 textarea {
@@ -188,7 +188,7 @@ textarea {
   }
 }
 
-input[type="text"]:focus {
+.form__section:focus {
   border-width: 1px;
   border-color: $azure;
   border-top: 1px solid transparent;
@@ -325,22 +325,22 @@ textarea {
     padding-bottom: 26px;
   }
 
-  input[type="text"]::-webkit-input-placeholder {
+  .form__section::-webkit-input-placeholder {
     font-size: 19px;
     line-height: 18px;
   }
 
-  input[type="text"]:-ms-input-placeholder {
+  .form__section:-ms-input-placeholder {
     font-size: 19px;
     line-height: 18px;
   }
 
-  input[type="text"]::placeholder {
+  .form__section::placeholder {
     font-size: 19px;
     line-height: 18px;
   }
 
-  input[type="text"]:-moz-placeholder {
+  .form__section:-moz-placeholder {
     font-size: 19px;
     line-height: 18px;
   }

@@ -3,7 +3,8 @@
 .page-header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-around;
+
   @include container-fluid();
 }
 
@@ -16,7 +17,6 @@
   line-height: 0;
 
   transform: translate(-50%);
-  z-index: 10;
 }
 
 .page-header__logo img {
@@ -34,11 +34,10 @@
     top: 22px;
     left: 50px;
 
-    margin: 0;
-    padding: 0;
-
     width: 86px;
     height: 35px;
+    margin: 0;
+    padding: 0;
 
     transform: translate(0);
   }
@@ -48,6 +47,7 @@
   .page-header__logo {
     top: 9px;
     left: 50%;
+
     transform: translate(-50%);
   }
 

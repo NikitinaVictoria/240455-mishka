@@ -9,17 +9,19 @@
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Мишка</h1>
-      <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
+      <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
         <button class="header-nav__toggle" type="button"></button>
-        <ul class="header-nav__nav-list">
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--catalog"><a class="header-nav__nav-list-link header-nav__nav-list-link--catalog" href="catalog.html">Каталог товаров</a></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--order"><a class="header-nav__nav-list-link header-nav__nav-list-link--order" href="">Вязание на заказ</a></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--search"><input type="text" name="site-search" value="Поиск по сайту"></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--cart"><a class="header-nav__nav-list-link header-nav__nav-list-link--cart" href="#">Корзина: пока пуста</a></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--new"><a class="header-nav__nav-list-link header-nav__nav-list-link--new" href="#">Новые поступления</a></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--sale"><a class="header-nav__nav-list-link header-nav__nav-list-link--sale" href="#">Распродажа</a></li>
-          <li class="header-nav__nav-list-item header-nav__nav-list-item--delivery"><span>Бесплатная доставка по России</span></li>
+        <ul class="header-nav__main-nav">
+          <li class="header-nav__main-nav-item header-nav__main-nav-item--catalog"><a class="header-nav__main-nav-link header-nav__main-nav-link--catalog" href="catalog.html">Каталог товаров</a></li>
+          <li class="header-nav__main-nav-item header-nav__main-nav-item--order"><a class="header-nav__main-nav-link header-nav__main-nav-link--order">Вязание на заказ</a></li>
+          <li class="header-nav__main-nav-item header-nav__main-nav-item--search"><input class="header-nav__main-nav-search-field" type="text" name="site-search" placeholder="Поиск по сайту"></li>
+          <li class="header-nav__main-nav-item header-nav__main-nav-item--cart"><a class="header-nav__main-nav-link header-nav__main-nav-link--cart" href="#">Корзина: пока пуста</a></li>
+        </ul>
+        <ul class="header-nav__extra-nav">
+          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--new"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--new" href="#">Новые поступления</a></li>
+          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--sale"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--sale" href="#">Распродажа</a></li>
+          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--delivery"><span>Бесплатная доставка по России</span></li>
         </ul>
       </nav>
     </header>
@@ -61,11 +63,11 @@
           <p class="form__title form__title--name">ФИО</p>
           <div class="form__field form__field--name">
             <label for="name">Имя:</label>
-            <input id="name" type="text" placeholder="Введите ваше имя*" required>
+            <input class="form__section" id="name" type="text" placeholder="Введите ваше имя*" required>
             <label for="surname">Фамилия:</label>
-            <input id="surname" type="text" placeholder="Укажите фамилию*" required>
+            <input class="form__section" id="surname" type="text" placeholder="Укажите фамилию*" required>
             <label for="patronym">Отчество:</label>
-            <input id="patronym" type="text" placeholder="Отчество, если желаете">
+            <input class="form__section" id="patronym" type="text" placeholder="Отчество, если желаете">
           </div>
         </div>
         <div class="form__stretch">
