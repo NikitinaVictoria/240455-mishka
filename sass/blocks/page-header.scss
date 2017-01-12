@@ -27,13 +27,22 @@
 @media #{$tablet-widths} {
   .page-header {
     flex-wrap: nowrap;
+    width: 100%;
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+      top: 88px;
+    }
   }
 
   .page-header__logo {
     position: absolute;
     top: 22px;
-    left: 50px;
-
+    left: 6.5%;
     width: 86px;
     height: 35px;
     margin: 0;

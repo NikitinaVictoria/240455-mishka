@@ -50,15 +50,14 @@
   top: 79px;
   left: 0;
 
+  display: flex;
+  flex-direction: column;
   width: 100%;
 
   @include unstyle-list();
-  display: flex;
-  flex-direction: column;
 }
 
-.header-nav__main-nav-item  {
-
+.header-nav__main-nav-item {
   background-color: #ffffff;
   border-top: 1px solid #ececec;
 }
@@ -75,17 +74,18 @@
 }
 
 .header-nav__main-nav-search-field {
+  display: block;
   align-self: center;
-  padding-left: 46px;
   width: 200px;
-  font-weight: bold;
   height: 79px;
+  margin: 0 auto;
+  padding-left: 46px;
+
+  font-weight: bold;
   color: #000000;
 
   background: url("../img/icon-search.svg") no-repeat 0 50%;
   border: none;
-  margin: 0 auto;
-  display: block
 }
 
 .header-nav__main-nav-link--cart {
@@ -95,15 +95,15 @@
 .header-nav__main-nav-link--cart::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  left: 0;
 
   display: block;
   width: 21px;
   height: 18px;
 
   background-image: url("../img/icon-cart.svg");
+  transform: translateY(-50%);
 }
 
 .header-nav__main-nav-link[href] {
@@ -160,108 +160,104 @@
 
 @media #{$tablet-widths} {
   .header-nav {
-    align-self: auto;
-    width: 100%;
-    height: 88px;
+    justify-content: flex-end;
+    height: auto;
+
+    @include container-fluid();
   }
 
   .header-nav__toggle {
     display: none;
   }
 
-  .header-nav__nav-list {
+  .header-nav__main-nav {
     position: static;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
-
-    transform: translateX(0);
   }
 
-  .header-nav__nav-list-item {
-    flex-shrink: 0;
-    height: 100%;
-    height: 88px;
-    padding-left: 0;
-
-    background-color: transparent;
+  .header-nav__main-nav-item {
     border-top: none;
   }
 
-  .header-nav__nav-list-link {
+  .header-nav__main-nav-link {
+    width: auto;
     padding-left: 0;
+
+    line-height: 88px;
   }
 
-  .header-nav__nav-list-item--search {
+  .header-nav__main-nav-item--search {
+    order: 2;
+    align-self: flex-start;
     box-sizing: border-box;
-    width: 83px;
-    margin-left: 48%;
+    width: 12%;
 
     border-right: 1px solid $border-color;
     border-left: 1px solid $border-color;
-    input {
-      width: 100%;
-      padding: 0;
-
-      font-size: 0;
-
-      background-position: center;
-    }
   }
 
-  .header-nav__nav-list-item--cart {
-    order: 1;
-    // a {
-    //   padding-left: 82px;
-    // }
-    // a::before {
-    //   left: 32px;
-    // }
+  .header-nav__main-nav-search-field {
+    width: 100%;
+    height: 86px;
+    padding-left: 0;
+
+    font-size: 0;
+
+    background-position: center;
   }
 
-  .header-nav__nav-list-link--cart {
-    padding-left: 82px;
+  .header-nav__main-nav-item--cart {
+    order: 3;
+    align-self: flex-start;
+    width: 40%;
+  }
+
+  .header-nav__main-nav-link--cart {
+    padding-left: 85px;
+
+    text-align: right;
     &::before {
       left: 32px;
     }
   }
 
-  .header-nav__nav-list-item--catalog {
-    order: 2;
+  .header-nav__main-nav-item--catalog {
+    width: 25%;
+    margin-top: 72px;
 
     font-size: 15px;
-    height: 58px;
-
   }
 
-  .header-nav__nav-list-item--order {
-    order: 3;
+  .header-nav__main-nav-item--order {
+    width: 23%;
+    margin-top: 72px;
 
     font-size: 15px;
-    margin-left: 35px;
-    margin-right: auto;
-    height: 58px;
   }
 
-  .header-nav__nav-list-item--delivery {
-    order: 4;
-    height: 58px;
-    span {
-      align-self: center;
+  .header-nav__extra-nav {
+    margin-top: -59px;
+    padding: 0;
 
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 24px;
-    }
+    list-style: none;
+  }
+
+  .header-nav__extra-nav-delivery {
+    align-self: center;
+
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
   }
 }
 
 @media #{$tablet-widths-only} {
-  .header-nav__nav-list-item--sale,
-  .header-nav__nav-list-item--new {
+  .header-nav__extra-nav-item--new,
+  .header-nav__extra-nav-item--sale {
     position: absolute;
 
     width: 1px;
