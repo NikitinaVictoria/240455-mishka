@@ -32,6 +32,7 @@
     width: 100%;
     margin-right: 0;
     margin-left: 0;
+    background-image: linear-gradient(#ffffff 88px, #f9f9f9 88px);
     &::before {
       content: "";
       position: absolute;
@@ -59,6 +60,7 @@
 }
 
 @media #{$desktop-widths} {
+
   .page-header__logo {
     top: 9px;
     left: 50%;
