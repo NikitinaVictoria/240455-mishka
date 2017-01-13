@@ -19,7 +19,10 @@
 
   @media #{$tablet-widths} {
   width: 87%;
-  max-width: 1050px;
+  }
+
+  @media #{$desktop-widths} {
+  width: 91.4%;
   }
 }
 
