@@ -3,7 +3,7 @@
 .reviews {
   padding-bottom: 45px;
 
-  @include container();
+  @include container-fluid();
 }
 
 .reviews__title {
@@ -42,9 +42,13 @@
   font-style: normal;
 }
 
+.reviews__controls {
+  font-size: 0;
+}
+
 .reviews__btn {
   box-sizing: border-box;
-  width: 127px;
+  width: 50%;
   height: 52px;
   margin-top: 33px;
   padding: 0;
@@ -52,27 +56,28 @@
   font-size: 0;
 
   background-color: transparent;
+  background-repeat: no-repeat;
   background-position: center;
-  border: none;
   border: 1px solid #ececec;
   cursor: pointer;
 }
 
 .reviews__btn--prev {
-  background: url("../img/icon-left-arrow.svg") no-repeat 37px;
+  background-image: url("../img/icon-left-arrow.svg");
 }
 
 .reviews__btn--next {
-  background: url("../img/icon-right-arrow.svg") no-repeat 37px;
+  background-image: url("../img/icon-right-arrow.svg");
   border-left: none;
 }
 
 .reviews__write {
   margin-top: 38px;
+  margin-right: auto;
+  margin-left: auto;
 
   @include btn;
 }
-
 
 @media #{$tablet-widths} {
   .reviews-wrapper {
@@ -87,7 +92,7 @@
     justify-content: space-between;
     padding-bottom: 112px;
 
-    @include container;
+    @include container-fluid();
   }
 
   .reviews__title {
@@ -106,6 +111,8 @@
     width: 175px;
     height: 52px;
     margin-top: 58px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .reviews__content {
@@ -132,23 +139,18 @@
     font-size: 17px;
   }
 
+  .reviews__controls {
+    display: flex;
+    order: 4;
+    width: 167px;
+    margin-left: auto;
+  }
+
   .reviews__btn {
+    width: 50%;
     margin-top: 20px;
 
     border: none;
-  }
-  .reviews__btn--prev {
-    order: 4;
-    margin-left: auto;
-
-    background-position: right;
-  }
-  .reviews__btn--next {
-    order: 5;
-    width: 87px;
-    margin-right: 20px;
-
-    background-position: right;
   }
 }
 
@@ -156,8 +158,6 @@
 @media #{$desktop-widths} {
   .reviews-wrapper {
     background: none;
-
-    // @include container;
   }
 
   .reviews {
@@ -168,7 +168,7 @@
 
   .reviews__title {
     margin-top: 71px;
-    padding-left: 175px;
+    padding-left: 16%;
 
     font-weight: bold;
     font-size: 53px;
@@ -176,16 +176,15 @@
   }
 
   .reviews__content {
-    width: 770px;
+    padding-right: 10%;
     padding-bottom: 25px;
-    padding-left: 175px;
+    padding-left: 16%;
   }
 
   .reviews__content span {
     display: table-row-group;
     width: 750px;
   }
-
 
   .reviews__author {
     padding-left: 175px;

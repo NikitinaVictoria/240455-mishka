@@ -5,7 +5,7 @@
 }
 
 .contacts__content {
-  @include container();
+  @include container-fluid();
 }
 
 .contacts__title {
@@ -17,6 +17,7 @@
 .contacts__info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 36px;
 
   font-size: 0;
@@ -24,6 +25,7 @@
 
 .contacts__section {
   display: flex;
+  width: 100%;
 
   font-weight: normal;
   font-size: 15px;
@@ -32,7 +34,7 @@
 
 .contacts__section-value {
   margin-bottom: 0;
-  padding-left: 32px;
+  padding-left: 12.5%;
 }
 
 .contacts__email {
@@ -44,7 +46,6 @@
 }
 
 .contacts__section-value---address {
-  width: 145px;
   margin-bottom: 0;
 }
 
@@ -53,14 +54,14 @@
   height: 457px;
   margin-bottom: 40px;
 
-  background: url("../img/map-mobile@1x.jpg") no-repeat -7px;
+  background: url("../img/map-mobile@1x.jpg") no-repeat center;
 }
 
 .contacts__write-us {
-  @include container();
   @include btn();
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 @media #{$tablet-widths} {
   .contacts {
@@ -73,7 +74,6 @@
   .contacts__content {
     padding-bottom: 21px;
 
-    @include container();
   }
 
   .contacts__title {
@@ -104,7 +104,7 @@
     height: 457px;
     margin-bottom: 55px;
 
-    background: url("../img/map-tablet.jpg") no-repeat -8px;
+    background: url("../img/map-tablet.jpg") no-repeat;
   }
 
   .contacts__write-us {
@@ -117,31 +117,32 @@
     display: block;
     padding-top: 115px;
     padding-bottom: 68px;
+    @include container-fluid();
   }
 
   .contacts__content {
     float: left;
-    width: 525px;
+    width: 50%;
     padding-bottom: 41px;
   }
 
   .contacts__title {
-    width: 350px;
+    width: 68%;
     margin-top: 60px;
     padding-top: 9px;
     padding-bottom: 17px;
-    padding-left: 215px;
+    padding-left: 32%;
 
     font-size: 53px;
     line-height: 57px;
 
-    background-position: 105px center;
+    background-position: 14% center;
   }
 
   .contacts__info {
     flex-direction: column;
-    width: 350px;
-    padding-left: 215px;
+    width: 67%;
+    padding-left: 33%;
   }
 
   .contacts__section-title--email {
@@ -154,17 +155,19 @@
 
   .contacts__map {
     float: right;
-    width: 525px;
+    width: 50%;
     height: 457px;
     margin-bottom: 0;
-    margin-right: 40px;
+
 
     background-position: -105px;
+    box-sizing: border-box;
+    background-image: url("../img/map-desktop@2x.jpg");
   }
 
   .contacts__write-us {
     clear: left;
     margin-right: 0;
-    margin-left: 215px;
+    margin-left: 17%;
   }
 }

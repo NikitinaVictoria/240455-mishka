@@ -1,7 +1,7 @@
 @import "../mixins.scss";
 
 .features {
-  @include container();
+  @include container-fluid();
 }
 
 .features__title {
@@ -17,17 +17,17 @@
 .features__list-item {
   margin-bottom: 25px;
   padding-top: 56px;
-  padding-right: 60px;
+  padding-right: 23%;
 
   line-height: 21px;
 }
 
 .features__list-item--materials {
-  padding-right: 80px;
+  padding-right: 31%;
 }
 
 .features__list-item--hand-made {
-  padding-right: 40px;
+  padding-right: 15%;
 }
 
 .features__list-item--national {
@@ -57,7 +57,7 @@
 
   .features__list-item {
     box-sizing: border-box;
-    width: 334px;
+    width: 50%;
     margin-bottom: 50px;
     padding-top: 56px;
     padding-right: 16%;
@@ -99,27 +99,29 @@
   }
 
   .features__title {
-    padding-left: 175px;
+    padding-left: 16%;
 
     font-size: 53px;
     line-height: 57px;
   }
 
   .features__list {
-    padding-left: 175px;
+    width: 66.5%;
+    padding-left: 17%;
   }
 
   .features__list-item {
-    width: 350px;
-    padding-right: 10%;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 13%;
   }
 
   .features__list-item--materials {
-    padding-right: 15%;
+    padding-right: 17%;
   }
 
   .features__list-item--likes {
-    padding-right: 15%;
+    padding-right: 16%;
   }
 
   .features__list-item--national {
