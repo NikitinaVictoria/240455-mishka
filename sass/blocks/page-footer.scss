@@ -11,7 +11,8 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  @include container();
+  @include container-fluid();
+  flex-direction: column;
 }
 
 .page-footer__social {
@@ -54,13 +55,13 @@
 
 .page-footer__copyright {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   min-height: 79px;
 }
 
 .page-footer__copyright-note {
   margin-right: 30px;
+  margin-left: auto;
 
   font-size: 19px;
   line-height: 18px;
@@ -72,12 +73,13 @@
   height: 34px;
 
   font-size: 0;
+  margin-right: auto;
 
   background-image: url("../img/logo-htmlacademy.svg");
 }
 
 @media #{$mobile-widths-only} {
-  .page-logo__footer {
+  .page-footer__logo {
     display: none;
   }
 }
@@ -87,9 +89,10 @@
     justify-content: space-between;
     margin-top: 31.5px;
     margin-bottom: 31.5px;
+    flex-direction: row;
   }
 
-  .page-logo__footer {
+  .page-footer__logo {
     align-self: center;
     width: 184px;
   }

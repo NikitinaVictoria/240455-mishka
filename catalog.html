@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--catalog">
       <h1 class="visually-hidden">Мишка</h1>
       <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
@@ -16,18 +16,19 @@
           <li class="header-nav__main-nav-item header-nav__main-nav-item--catalog"><a class="header-nav__main-nav-link header-nav__main-nav-link--catalog">Каталог товаров</a></li>
           <li class="header-nav__main-nav-item header-nav__main-nav-item--order"><a class="header-nav__main-nav-link header-nav__main-nav-link--order" href="form.html">Вязание на заказ</a></li>
           <li class="header-nav__main-nav-item header-nav__main-nav-item--search"><input class="header-nav__main-nav-search-field" type="text" name="site-search" placeholder="Поиск по сайту"></li>
-          <li class="header-nav__main-nav-item header-nav__main-nav-item--cart"><a class="header-nav__main-nav-link header-nav__main-nav-link--cart" href="#">Корзина: пока пуста</a></li>
+          <li class="header-nav__main-nav-item header-nav__main-nav-item--cart"><a class="header-nav__main-nav-link header-nav__main-nav-link--cart" href="">Корзина: пока пуста</a></li>
         </ul>
         <ul class="header-nav__extra-nav">
+          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--delivery"><span class="header-nav__extra-nav-delivery">Бесплатная доставка по России</span></li>
           <li class="header-nav__extra-nav-item header-nav__extra-nav-item--new"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--new" href="#">Новые поступления</a></li>
           <li class="header-nav__extra-nav-item header-nav__extra-nav-item--sale"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--sale" href="#">Распродажа</a></li>
-          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--delivery"><span class="header-nav__extra-nav-delivery">Бесплатная доставка по России</span></li>
+        </ul>
         </ul>
       </nav>
     </header>
     <main>
       <div class="catalog-heading">
-        <h1>Каталог товаров</h1>
+        <h1 class="catalog-heading__title">Каталог товаров</h1>
       </div>
       <section class="items">
         <article class="item item--rabbit">
