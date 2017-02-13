@@ -7,6 +7,11 @@
   background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 20%;
   background-size: inherit;
   border-top: 1px solid #ececec;
+
+  @media #{$retina} {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  };
 }
 
 .intro__slogan {
@@ -21,6 +26,13 @@
 @media #{$tablet-widths} {
   .intro {
     border-top: none;
+    background: url("../img/hero-desktop@1x.jpg") no-repeat 50% -74px;
+
+    @media #{$retina} {
+      background-image: url("../img/hero-desktop@2x.jpg");
+
+      background-size: 1150px auto;
+    };
   }
 
   .intro__slogan {
@@ -35,7 +47,7 @@
 
 @media #{$desktop-widths} {
   .intro {
-    background: url("../img/hero-desktop.jpg") no-repeat 50% 0;
+    background-position: 50% -76px;
   }
 
   .intro__slogan {
