@@ -9,19 +9,26 @@
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Мишка</h1>
-      <a class="page-header__logo" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="149" height="72" alt="Мишка">
+        </picture>
+      </a>
       <nav class="header-nav header-nav--closed header-nav--nojs">
         <button class="header-nav__toggle" type="button"></button>
         <ul class="header-nav__main-nav">
           <li class="header-nav__main-nav-item header-nav__main-nav-item--catalog"><a class="header-nav__main-nav-link header-nav__main-nav-link--catalog" href="catalog.html">Каталог товаров</a></li>
           <li class="header-nav__main-nav-item header-nav__main-nav-item--order"><a class="header-nav__main-nav-link header-nav__main-nav-link--order">Вязание на заказ</a></li>
           <li class="header-nav__main-nav-item header-nav__main-nav-item--search"><input class="header-nav__main-nav-search-field" type="text" name="site-search" placeholder="Поиск по сайту"></li>
-          <li class="header-nav__main-nav-item header-nav__main-nav-item--cart"><a class="header-nav__main-nav-link header-nav__main-nav-link--cart" href="#">Корзина: пока пуста</a></li>
+          <li class="header-nav__main-nav-item header-nav__main-nav-item--cart"><a class="header-nav__main-nav-link header-nav__main-nav-link--cart" href="">Корзина: пока пуста</a></li>
         </ul>
         <ul class="header-nav__extra-nav">
+          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--delivery"><span class="header-nav__extra-nav-delivery">Бесплатная доставка по России</span></li>
           <li class="header-nav__extra-nav-item header-nav__extra-nav-item--new"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--new" href="#">Новые поступления</a></li>
           <li class="header-nav__extra-nav-item header-nav__extra-nav-item--sale"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--sale" href="#">Распродажа</a></li>
-          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--delivery"><span class="header-nav__extra-nav-delivery">Бесплатная доставка по России</span></li>
+        </ul>
         </ul>
       </nav>
     </header>
@@ -94,7 +101,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__container">
-        <a class="page-logo__footer" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt=""></a>
+        <a class="page-footer__logo"href="index.html"><img src="img/logo-footer.svg" width="102" height="34" alt=""></a>
         <section class="page-footer__social">
           <a class="page-footer__social-link page-footer__social-link--in" href="">Мы в Инстаграме</a>
           <a class="page-footer__social-link page-footer__social-link--fb" href="">Мы в Фейсбуке</a>
