@@ -81,11 +81,11 @@
           <div class="form__container">
             <p class="form__title form__title--сеll">ТЕЛ</p>
             <div class="form__field form__field--сеll">
-              <input id="cell" type="tel" name="cell-field" placeholder="+7 ХХХ ХХ ХХ*" pattern="[+]{1}[7]{1} [0-9]{3} [0-9]{3} [0-9]{3}" required>
+              <input class="form__section" id="cell" type="tel" name="cell-field" placeholder="+7 ХХХ ХХ ХХ*" pattern="[+]{1}[7]{1} [0-9]{3} [0-9]{3} [0-9]{3}" required>
             </div>
             <p class="form__title form__title--email">E-MAIL</p>
             <div class="form__field form__field--email">
-              <input id="email" type="email" name="email-field" placeholder="Ваш Email*" required>
+              <input class="form__section" id="email" type="email" name="email-field" placeholder="Ваш Email*" required>
             </div>
           </div>
         </div>
@@ -116,7 +116,19 @@
     <script>
       var navHeader = document.querySelector(".header-nav");
       var navToggle = document.querySelector(".header-nav__toggle");
-
+      // var AddToCart = document.querySelector(".add-to-cart");
+      // var CartPopup = document.querySelector(".modal-overlay");
+      // AddToCart.addEventListener("click", function(event) {
+      //   event.preventDefault();
+      //   CartPopup.classList.add("modal-overlay-show");
+      //   });
+      //   window.addEventListener("keydown", function(event) {
+      //   if (event.keyCode === 27) {
+      //     if (CartPopup.classList.contains("modal-overlay-show")) {
+      //   CartPopup.classList.remove("modal-overlay-show");
+      //       }
+      //     }
+      // });
       navHeader.classList.remove("header-nav--nojs");
 
       navToggle.addEventListener("click", function() {
@@ -127,7 +139,6 @@
           navHeader.classList.add("header-nav--closed");
           navHeader.classList.remove("header-nav--opened");
         }
-        });
       });
     </script>
   </body>
