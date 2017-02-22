@@ -14,13 +14,14 @@
   font-size: 27px;
   color: #231f20;
 
-  @include container();
+  @include  container();
 }
 
 @media #{$tablet-widths} {
   .form-heading {
-    padding-top: 95px;
+    padding-top: 20px;
     padding-bottom: 80px;
+    padding-left: 0;
   }
 
   .form-heading h1 {

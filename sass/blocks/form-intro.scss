@@ -9,7 +9,7 @@
   line-height: 24px;
   color: #444444;
 
-  @include container();
+  @include container-fluid();
 }
 
 @media #{$tablet-widths} {
