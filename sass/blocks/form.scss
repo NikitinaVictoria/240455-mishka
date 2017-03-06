@@ -54,11 +54,6 @@
 }
 
 @media #{$mobile-widths-only} {
-
-  // .form__field--category {
-  //   justify-content: space-between;
-  // }
-
   .form__title::after {
     content: "";
     position: absolute;
@@ -475,19 +470,19 @@ textarea {
 
   .form__btn {
     order: 0;
-    // width: 230px;
+
     width: 35%;
     height: 52px;
     margin-top: 52px;
-    // margin-left: 40px;
+
   }
 
   .form__note {
     order: 1;
-    // width: 345px;
+
     padding-top: 62px;
     padding-bottom: 0;
-    // padding-left: 131px;
+
     width: 65%;
     text-align: right;
 
@@ -500,88 +495,90 @@ textarea {
   .form {
     padding-bottom: 10px;
   }
+
   .form__title--category {
     padding-left: 65px;
+    width: 17%;
   }
 
   .form__field--category {
-    padding-left: 10px;
+    width: 82%;
+  }
+
+  .form__field--category label {
+    width: 100%;
   }
 
   .form__title--color {
-    width: 178px;
     padding-left: 65px;
+    width: 17%;
   }
 
   .form__field--color {
-    width: 786px;
+    width: 82%;
+    padding-right: 75px;
+    box-sizing: border-box;
+  }
+
+  input[type="checkbox"] + label {
+    width: 33.3%;
   }
 
   input[type="checkbox"] + label[for="orange"],
   input[type="checkbox"] + label[for="black"],
   input[type="checkbox"] + label[for="gray"] {
-    width: 262px;
+    width: 33.3%;
   }
 
   .form__title--name {
     padding-left: 65px;
+    width: 17%;
   }
 
   .form__field--name {
-    width: 770px;
-    padding-left: 10px;
+    width: 66.6%;
   }
-
-
-  label[for="surname"] + input,
-  label[for="patronym"] + input {
-    width: 555px;
-    margin-right: 65px;
-  }
-
-  label[for="name"] + input {
-    width: 614px;
-  }
-
 
   .form__title--сеll {
     padding-left: 63px;
+    width: 17%;
   }
 
   .form__field--сеll {
-    width: 700px;
-    margin-right: 100px;
-    margin-left: 15px;
+    width: 66.6%;
   }
 
   .form__title--email {
     padding-left: 60px;
+    width: 17%;
   }
 
   .form__field--email {
-    width: 700px;
-    padding-left: 15px;
+    width: 66.6%;
   }
 
   .form__title--extra {
     padding-left: 60px;
+    width: 17%;
   }
 
   .form__field--extra {
-    width: 700px;
-    padding-left: 10px;
+    width: 66.6%;
   }
 
   textarea {
-    width: 700px;
+    width: 100%;
   }
 
   .form__note {
     margin-left: 0;
     padding-left: 0;
+    width: 45%;
   }
 
   .form__btn {
-    margin-left: 217px;
+    margin-left: 17%;
+    margin-right: 0;
+    width: 22%;
   }
 }
