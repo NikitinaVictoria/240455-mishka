@@ -5,6 +5,11 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="../js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header page-header--catalog">
@@ -39,7 +44,13 @@
       <section class="items">
         <article class="item item--rabbit">
           <a class="item__link item__link--rabbit" href="">
-            <img class="item__photo item__photo--rabbit" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="">
+            <div class="item__photo-wrapper item__photo-wrapper--rabbit">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="item__photo item__photo--rabbit" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+              </picture>
+            </div>
           </a>
           <div class="item__info item__info--rabbit">
             <a class="item__title item__title--rabbit" href="">Зайчик-попрыгайчик</a>
@@ -49,7 +60,13 @@
         </article>
         <article class="item item--underwear-basket">
           <a class="item__link item__link--underwear-basket" href="">
-            <img class="item__photo item__photo--underwear-basket" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="">
+            <div class="item__photo-wrapper item__photo-wrapper--underwear-basket">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="item__photo item__photo--underwear-basket" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
+              </picture>
+            </div>
           </a>
           <div class="item__info item__info--underwear-basket">
             <a class="item__title item__title--underwear-basket" href="">Корзинка для белья</a>
@@ -59,7 +76,13 @@
         </article>
         <article class="item item--toys-basket">
           <a class="item__link item__link--toys-basket" href="">
-            <img class="item__photo item__photo--toys-basket" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="">
+            <div class="item__photo-wrapper item__photo-wrapper--toys-basket">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="item__photo item__photo--toys-basket" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+              </picture>
+            </div>
           </a>
           <div class="item__info item__info--toys-basket">
             <a class="item__title item__title--toys-basket" href="">Большая корзинка для игрушек</a>
@@ -70,7 +93,13 @@
       </section>
       <section class="production">
         <h2 class="production__title">Процесс производства</h2>
-        <video class="production__video" src="videofile.ogg" autoplay poster="img/video-mobile@1x.jpg" width="260" height="150"></video>
+        <div class="production__video" width="260" height="150">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="production__poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x">
+          </picture>
+        </div>
         <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="production__order btn add-to-cart" href="">Сделать заказ</a>
       </section>
