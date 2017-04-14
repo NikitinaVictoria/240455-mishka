@@ -60,7 +60,13 @@
             <p class="product-of-the-week__characteristic product-of-the-week__characteristic--value">15 см</p>
           </div>
         </div>
-        <img class="product-of-the-week__picture" src="../img/triple-set-mobile@1x.jpg" width="260" height="315" alt="">
+        <div class="product-of-the-week__picture-wrapper">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="../img/triple-set-desktop@1x.jpg, ../img/triple-set-desktop@2x.jpg 1050w">
+            <source media="(min-width: 768px)" srcset="../img/triple-set-tablet@1x.jpg, ../img/triple-set-tablet@2x.jpg 666w">
+            <img class="product-of-the-week__picture" src="../img/triple-set-mobile@1x.jpg" srcset="../img/triple-set-mobile@2x.jpg 520w" alt="Товар недели">
+          </picture>
+        </div>
         <div class="product-of-the-week__order-details">
           <div class="product-of-the-week__price">Цена: 990 руб.</div>
           <a class="product-of-the-week__order add-to-cart" href="">Заказать</a>

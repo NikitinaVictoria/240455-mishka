@@ -78,7 +78,6 @@
 
   .contacts__content {
     padding-bottom: 21px;
-
   }
 
   .contacts__title {
@@ -126,7 +125,7 @@
     display: block;
     padding-top: 115px;
     padding-bottom: 68px;
-    @include container-fluid();
+    width: 91.4%;
   }
 
   .contacts__content {
