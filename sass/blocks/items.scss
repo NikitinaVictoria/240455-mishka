@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   padding-top: 30px;
 
-  @include container();
+  @include container-fluid();
 }
 
 @media #{$tablet-widths} {

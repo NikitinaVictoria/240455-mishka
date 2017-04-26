@@ -410,7 +410,7 @@ textarea {
     width: calc(100% - 90px);
     height: auto;
     margin-bottom: 36px;
-    margin-left: 20px;
+    margin-left: 15px;
     padding-bottom: 16px;
     padding-left: 21px;
   }
@@ -419,7 +419,7 @@ textarea {
     width: calc(100% - 145px);
     height: auto;
     margin-bottom: 40px;
-    margin-left: 26px;
+    margin-left: 21px;
     padding-bottom: 15px;
     padding-left: 18px;
   }
@@ -427,7 +427,7 @@ textarea {
   label[for="patronym"] + input {
     width: calc(100% - 150px);
     height: auto;
-    margin-left: 30px;
+    margin-left: 25px;
     padding-bottom: 16px;
     padding-left: 21px;
   }
@@ -496,6 +496,10 @@ textarea {
     padding-bottom: 10px;
   }
 
+  .form__field {
+    width: 67%;
+  }
+
   .form__title--category {
     padding-left: 65px;
     width: 17%;
@@ -535,7 +539,7 @@ textarea {
     width: 17%;
   }
 
-  .form__field--name {
+  .form__field-- {
     width: 66.6%;
   }
 
