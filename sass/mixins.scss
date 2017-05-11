@@ -51,6 +51,13 @@
     border: 2px solid #444444;
     background-color: transparent;
     cursor: pointer;
+    &:hover {
+      background-color: #444444;
+      color: #ffffff;
+    }
+    &:active {
+      opacity: 0.3;
+    }
   }
 
 @mixin clearfix() {

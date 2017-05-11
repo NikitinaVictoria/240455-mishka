@@ -62,6 +62,14 @@
   cursor: pointer;
 }
 
+.reviews__btn:hover {
+  opacity: 0.6;
+}
+
+.reviews__btn:active {
+  opacity: 0.3;
+}
+
 .reviews__btn--prev {
   background-image: url("../img/icon-left-arrow.svg");
 }
