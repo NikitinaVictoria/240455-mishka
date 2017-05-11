@@ -78,6 +78,14 @@
   background-image: url("../img/logo-htmlacademy.svg");
 }
 
+.page-footer__logo-svg:hover {
+  fill: #46c1ae;
+}
+
+.page-footer__logo-svg:active {
+  opacity: 0.3;
+}
+
 @media #{$mobile-widths-only} {
   .page-footer__logo {
     display: none;
