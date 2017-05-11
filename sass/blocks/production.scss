@@ -23,6 +23,25 @@
 
 .production__video {
   margin-bottom: 28px;
+  position: relative;
+}
+
+.production__icon-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.production__icon-play:hover {
+  width: 121px;
+  height: auto;
+}
+
+.production__icon-play:active {
+  width: 81px;
+  height: auto;
+  opacity: 0.3;
 }
 
 .production__description {
@@ -71,7 +90,6 @@
     font-size: 20px;
     line-height: 24px;
 }
-
 
   .production__description {
     order: 2;

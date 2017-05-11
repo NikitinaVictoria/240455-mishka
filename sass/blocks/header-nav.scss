@@ -206,9 +206,11 @@
     height: 86px;
     padding-left: 0;
 
-    font-size: 0;
-
     background-position: center;
+  }
+
+  .header-nav__main-nav-search-field::placeholder {
+    font-size: 0;
   }
 
   .header-nav__main-nav-item--cart {

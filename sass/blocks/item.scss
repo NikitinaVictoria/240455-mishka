@@ -29,6 +29,14 @@
   color: #000000;
 }
 
+.item__title:hover {
+  opacity: 0.6;
+}
+
+.item__title:active {
+  opacity: 0.3;
+}
+
 .item__description {
   margin-top: 5px;
   margin-right: 11%;

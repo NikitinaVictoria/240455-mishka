@@ -45,6 +45,14 @@
   border-bottom: 1px solid #62d1ba;
 }
 
+.contacts__email:hover {
+  color: #46c1ae;
+}
+
+.contacts__email:active {
+  opacity: 0.3;
+}
+
 .contacts__section-value---address {
   margin-bottom: 0;
 }
