@@ -74,6 +74,10 @@
   text-decoration: none;
 }
 
+.header-nav__main-nav-item--search {
+  position: relative;
+}
+
 .header-nav__main-nav-search-field {
   display: block;
   align-self: center;
@@ -86,7 +90,16 @@
   color: #000000;
 
   background: url("../img/icon-search.svg") no-repeat 0 50%;
+  outline: none;
   border: none;
+}
+
+.header-nav__main-nav-search-field:hover {
+  background-image: url("../img/icon-search-hover.svg");
+}
+
+.header-nav__main-nav-search-field:focus {
+  background-image: url("../img/icon-search-down.svg");
 }
 
 .header-nav__main-nav-link--cart {

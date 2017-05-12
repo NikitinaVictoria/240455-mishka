@@ -36,12 +36,14 @@
 .production__icon-play:hover {
   width: 121px;
   height: auto;
+  cursor: pointer;
 }
 
 .production__icon-play:active {
   width: 81px;
   height: auto;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .production__description {
