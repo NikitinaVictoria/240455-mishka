@@ -29,6 +29,27 @@
   text-decoration: none;
 
   @include container-fluid();
+  position: relative;
+}
+
+.main-menu__item-name:active {
+  opacity: 0.3;
+}
+
+.main-menu__item-picture {
+  fill: rgba(59, 176, 157, .5);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.main-menu__item:hover .main-menu__item-picture {
+  fill: rgba(41, 165, 146, .7);
+}
+
+.main-menu__item:active .main-menu__item-picture {
+  fill: rgba(68, 192, 170, .3);
 }
 
 @media #{$tablet-widths} {
@@ -42,6 +63,10 @@
   .main-menu__item {
     width: 50%;
     min-height: 119px;
+    background: #63d1bb url("../img/bg-zigzag-fill.svg") no-repeat 100% 120%;
+    &--toys {
+      background-color: #56c3b2;
+    }
   }
 
   .main-menu__item-name {
@@ -49,6 +74,10 @@
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .main-menu__item-picture {
+    right: 15px;
   }
 }
 

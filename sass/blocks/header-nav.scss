@@ -63,6 +63,16 @@
   border-top: 1px solid #ececec;
 }
 
+.header-nav__main-nav-link:hover,
+.header-nav__extra-nav-link:hover {
+  opacity: 0.6;
+}
+
+.header-nav__main-nav-link:active,
+.header-nav__extra-nav-link:active {
+  opacity: 0.3;
+}
+
 .header-nav__main-nav-link {
   display: block;
   width: 200px;
@@ -233,7 +243,7 @@
   }
 
   .header-nav__main-nav-link--cart {
-    padding-left: 30%;
+    text-align: right;
   }
 
   .icon-cart {
