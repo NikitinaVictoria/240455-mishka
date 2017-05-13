@@ -13,12 +13,20 @@
 
 .production__title {
   margin-top: 26px;
-  margin-left: 13%;
   margin-bottom: 24px;
-  padding-left: 22%;
+  margin-left: 35%;
 
   font-size: inherit;
   line-height: 24px;
+  position: relative;
+}
+
+.production__icon-video {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 5px;
+  left: -60px;
 }
 
 .production__video {
@@ -91,7 +99,12 @@
 
     font-size: 20px;
     line-height: 24px;
-}
+  }
+
+  .production__icon-video {
+    top: -8px;
+    left: 0;
+  }
 
   .production__description {
     order: 2;
@@ -128,6 +141,10 @@
     padding-top: 63px;
     padding-right: 10%;
     padding-left: 5.5%;
+  }
+
+  .production__icon-video {
+    top: 70px;
   }
 
   .production__video {

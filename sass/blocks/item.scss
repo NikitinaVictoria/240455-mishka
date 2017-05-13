@@ -60,6 +60,34 @@
 
   font-size: 15px;
   line-height: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 11%;
+
+}
+
+.add-to-cart-icon {
+  width: 21px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.add-to-cart-icon__icon-cart {
+  position: static;
+  transform: translateX(0) translateY(0);
+  opacity: 0.2;
+}
+
+.add-to-cart-icon__icon-cart:hover {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
+.add-to-cart-icon__icon-cart:active {
+  opacity: 0.3;
 }
 
 @media #{$tablet-widths} {
