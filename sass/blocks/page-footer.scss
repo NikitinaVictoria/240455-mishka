@@ -74,14 +74,20 @@
   vertical-align: baseline;
 }
 
+.page-footer__copyright:hover .page-footer__icon--html {
+  fill: #46c1ae;
+}
+
+.page-footer__copyright:active .page-footer__icon--html,
+.page-footer__copyright:active {
+  opacity: 0.3;
+}
+
 .page-footer__copyright-link {
-  width: 27px;
-  height: 34px;
+  position: relative;
 
   font-size: 0;
   margin-right: auto;
-
-  background-image: url("../img/logo-htmlacademy.svg");
 }
 
 .page-footer__logo-svg:hover {
