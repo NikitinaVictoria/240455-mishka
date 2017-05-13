@@ -26,31 +26,37 @@
 }
 
 .page-footer__social-link {
-  margin-right: 40px;
+  margin-right: 60px;
 
   font-size: 0;
+  position: relative;
 }
 
-.page-footer__social-link--in {
-  width: 22px;
-  height: 21px;
-
-  background-image: url("../img/icon-insta.svg");
+.page-footer__icon {
+  position: absolute;
 }
 
-.page-footer__social-link--fb {
-  width: 15px;
-  height: 29px;
-
-  background-image: url("../img/icon-fb.svg");
+.page-footer__icon--fb {
+  bottom: 0;
+  transform: translateX(130%) translateY(0);
 }
 
-.page-footer__social-link--tw {
-  width: 24px;
-  height: 20px;
-  margin-right: 0;
+.page-footer__icon--insta {
+  top: 50%;
+  transform: translateX(60%) translateY(-50%);
+}
 
-  background-image: url("../img/icon-twitter.svg");
+.page-footer__icon--tw {
+  top: 50%;
+  transform: translateX(60%) translateY(-50%);
+}
+
+.page-footer__icon:hover {
+  fill: #46c1ae;
+}
+
+.page-footer__icon:active {
+  opacity: 0.3;
 }
 
 .page-footer__copyright {
