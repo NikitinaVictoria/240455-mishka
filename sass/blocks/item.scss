@@ -67,7 +67,7 @@
 
 }
 
-.add-to-cart-icon {
+.add-to-cart {
   width: 21px;
   height: 18px;
   display: inline-block;
@@ -75,18 +75,18 @@
 
 }
 
-.add-to-cart-icon__icon-cart {
+.add-to-cart__icon {
   position: static;
   transform: translateX(0) translateY(0);
   opacity: 0.2;
 }
 
-.add-to-cart-icon__icon-cart:hover {
+.add-to-cart__icon:hover {
   fill: #63d1bb;
   opacity: 1;
 }
 
-.add-to-cart-icon__icon-cart:active {
+.add-to-cart__icon:active {
   opacity: 0.3;
 }
 
