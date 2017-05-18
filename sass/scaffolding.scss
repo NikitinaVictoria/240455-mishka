@@ -49,3 +49,60 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.modal-content-show {
+  display: block;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  background-color: #63d1bb;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  opacity: 1;
+}
+
+.modal-close-btn:active::before,
+.modal-close-btn:active::after {
+  opacity: 0.3;
+}
+
+.modal-close-btn::before,
+.modal-close-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 32px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.modal-close-btn::before {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+.modal-close-btn::after {
+  top: 49%;
+
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+}

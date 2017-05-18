@@ -84,7 +84,7 @@
             <p class="item__description item__description--rabbit">Рост 30 см, вес 200 г</p>
             <div class="item__price item__price--rabbit">1 200 руб.
               <a class="add-to-cart-icon" href="">
-                <svg class="add-to-cart-icon__icon-cart" width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use></svg>
+                <svg class="add-to-cart-icon__icon-cart add-to-cart" width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use></svg>
               </a>
             </div>
           </div>
@@ -143,7 +143,7 @@
           </picture>
         </div>
         <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__order btn add-to-cart" href="">Сделать заказ</a>
+        <a class="production__order btn" href="">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -211,7 +211,6 @@
           }
       });
       navHeader.classList.remove("header-nav--nojs");
-
       navToggle.addEventListener("click", function() {
         if (navHeader.classList.contains("header-nav--closed")) {
           navHeader.classList.remove("header-nav--closed");

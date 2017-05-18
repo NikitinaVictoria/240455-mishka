@@ -185,7 +185,16 @@
             </div>
           </div>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+          <img class="contacts__map-pin" src="img/icon-map-pin.svg" alt="">
+        </div>
+        <div class="contacts__map-modal">
+          <button class="contacts__map-close modal-close-btn" type="button" title="Закрыть">Закрыть</button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.7442665079266!2d30.320439902040004!
+            3d59.93885010931823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c87
+            9f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsy
+            wgMTkxMTg2!5e0!3m2!1sru!2sru!4v1495115367947" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
         <a class="contacts__write-us" href="">Напишите нам</a>
       </section>
     </main>
@@ -211,39 +220,25 @@
         </section>
       </div>
     </footer>
-    <div class="modal-overlay">
-      <div class="modal-content">
-        <h1 class="modal-content__title">Добавить в корзину</h1>
-        <form action="#" class="modal-content__form">
-          <p class="modal-content__form-title">Выберите размер:</p>
-          <input class="modal-content__radio" id="s-size" type="radio" name="size" value="s">
-          <label class="modal-content__size" for="s-size">S</label>
-          <input class="modal-content__radio" id="m-size" type="radio" name="size" value="m">
-          <label class="modal-content__size" for="m-size">M</label>
-          <input class="modal-content__radio" id="l-size" type="radio" name="size" value="l">
-          <label class="modal-content__size" for="l-size">L</label>
-          <button class="modal-content__btn" type="button">Добавить</button>
-        </form>
-      </div>
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-content__close modal-close-btn" type="button" title="Закрыть">Закрыть</button>
+      <h1 class="modal-content__title">Добавить в корзину</h1>
+      <form action="#" class="modal-content__form">
+        <p class="modal-content__form-title">Выберите размер:</p>
+        <input class="modal-content__radio" id="s-size" type="radio" name="size" value="s">
+        <label class="modal-content__size" for="s-size">S</label>
+        <input class="modal-content__radio" id="m-size" type="radio" name="size" value="m">
+        <label class="modal-content__size" for="m-size">M</label>
+        <input class="modal-content__radio" id="l-size" type="radio" name="size" value="l">
+        <label class="modal-content__size" for="l-size">L</label>
+        <button class="modal-content__btn" type="button">Добавить</button>
+      </form>
     </div>
     <script>
       var navHeader = document.querySelector(".header-nav");
       var navToggle = document.querySelector(".header-nav__toggle");
-      var AddToCart = document.querySelector(".add-to-cart");
-      var CartPopup = document.querySelector(".modal-overlay");
-        AddToCart.addEventListener("click", function(event) {
-        event.preventDefault();
-        CartPopup.classList.add("modal-overlay-show");
-        });
-        window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (CartPopup.classList.contains("modal-overlay-show")) {
-        CartPopup.classList.remove("modal-overlay-show");
-            }
-          }
-      });
       navHeader.classList.remove("header-nav--nojs");
-
       navToggle.addEventListener("click", function() {
         if (navHeader.classList.contains("header-nav--closed")) {
           navHeader.classList.remove("header-nav--closed");
@@ -253,6 +248,56 @@
           navHeader.classList.remove("header-nav--opened");
         }
       });
-  </script>
+      var AddToCart = document.querySelector(".add-to-cart");
+      var CartPopup = document.querySelector(".modal-content");
+      var Overlay = document.querySelector(".modal-overlay");
+      var CartPopupClose = document.querySelector(".modal-content__close");
+        AddToCart.addEventListener("click", function(event) {
+        event.preventDefault();
+        CartPopup.classList.add("modal-content-show");
+        });
+        AddToCart.addEventListener("click", function(event) {
+        event.preventDefault();
+        Overlay.classList.add("modal-content-show");
+        });
+        CartPopupClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        CartPopup.classList.remove("modal-content-show");
+        Overlay.classList.remove("modal-content-show");
+        });
+        Overlay.addEventListener("click", function(event) {
+        event.preventDefault();
+        CartPopup.classList.remove("modal-content-show");
+        Overlay.classList.remove("modal-content-show");
+        });
+        window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (CartPopup.classList.contains("modal-content-show")) {
+                CartPopup.classList.remove("modal-content-show");
+            }
+            if (Overlay.classList.contains("modal-content-show")) {
+                  Overlay.classList.remove("modal-content-show");
+              }
+          }
+      });
+      var MapLink = document.querySelector(".contacts__map");
+      var MapPopup = document.querySelector(".contacts__map-modal");
+      var MapClose = document.querySelector(".contacts__map-close");
+          MapLink.addEventListener("click", function(event) {
+          event.preventDefault();
+          MapPopup.classList.add("modal-content-show");
+        });
+          MapClose.addEventListener("click", function(event) {
+          event.preventDefault();
+          MapPopup.classList.remove("modal-content-show");
+          });
+          window.addEventListener("keydown", function(event) {
+            if (event.keyCode === 27) {
+              if (MapPopup.classList.contains("modal-content-show")) {
+              MapPopup.classList.remove("modal-content-show");
+              }
+            }
+          });
+    </script>
   </body>
 </html>
