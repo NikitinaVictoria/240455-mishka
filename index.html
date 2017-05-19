@@ -248,17 +248,16 @@
           navHeader.classList.remove("header-nav--opened");
         }
       });
-      var addToCart = document.querySelector(".add-to-cart");
+      var addToCart = document.querySelectorAll(".add-to-cart");
       var cartPopup = document.querySelector(".modal-content");
       var overlay = document.querySelector(".modal-overlay");
       var cartPopupClose = document.querySelector(".modal-content__close");
-        addToCart.addEventListener("click", function(event) {
+        addToCart.forEach(function(e, i) {
+        e.addEventListener("click", function() {
         event.preventDefault();
         cartPopup.classList.add("modal-content-show");
-        });
-        addToCart.addEventListener("click", function(event) {
-        event.preventDefault();
         overlay.classList.add("modal-content-show");
+        });
         });
         cartPopupClose.addEventListener("click", function(event) {
         event.preventDefault();
