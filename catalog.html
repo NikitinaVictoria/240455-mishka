@@ -196,50 +196,50 @@
       </form>
     </div>
     <script>
-      var navHeader = document.querySelector(".header-nav");
-      var navToggle = document.querySelector(".header-nav__toggle");
-      navHeader.classList.remove("header-nav--nojs");
-      navToggle.addEventListener("click", function() {
-        if (navHeader.classList.contains("header-nav--closed")) {
-          navHeader.classList.remove("header-nav--closed");
-          navHeader.classList.add("header-nav--opened");
-        } else {
-          navHeader.classList.add("header-nav--closed");
-          navHeader.classList.remove("header-nav--opened");
-        }
+    var navHeader = document.querySelector(".header-nav");
+    var navToggle = document.querySelector(".header-nav__toggle");
+    navHeader.classList.remove("header-nav--nojs");
+    navToggle.addEventListener("click", function() {
+      if (navHeader.classList.contains("header-nav--closed")) {
+        navHeader.classList.remove("header-nav--closed");
+        navHeader.classList.add("header-nav--opened");
+      } else {
+        navHeader.classList.add("header-nav--closed");
+        navHeader.classList.remove("header-nav--opened");
+      }
+    });
+    var addToCart = document.querySelector(".add-to-cart");
+    var cartPopup = document.querySelector(".modal-content");
+    var overlay = document.querySelector(".modal-overlay");
+    var cartPopupClose = document.querySelector(".modal-content__close");
+      addToCart.addEventListener("click", function(event) {
+      event.preventDefault();
+      cartPopup.classList.add("modal-content-show");
       });
-      var AddToCart = document.querySelector(".add-to-cart");
-      var CartPopup = document.querySelector(".modal-content");
-      var Overlay = document.querySelector(".modal-overlay");
-      var CartPopupClose = document.querySelector(".modal-content__close");
-        AddToCart.addEventListener("click", function(event) {
-        event.preventDefault();
-        CartPopup.classList.add("modal-content-show");
-        });
-        AddToCart.addEventListener("click", function(event) {
-        event.preventDefault();
-        Overlay.classList.add("modal-content-show");
-        });
-        CartPopupClose.addEventListener("click", function(event) {
-        event.preventDefault();
-        CartPopup.classList.remove("modal-content-show");
-        Overlay.classList.remove("modal-content-show");
-        });
-        Overlay.addEventListener("click", function(event) {
-        event.preventDefault();
-        CartPopup.classList.remove("modal-content-show");
-        Overlay.classList.remove("modal-content-show");
-        });
-        window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (CartPopup.classList.contains("modal-content-show")) {
-                CartPopup.classList.remove("modal-content-show");
-            }
-            if (Overlay.classList.contains("modal-content-show")) {
-                  Overlay.classList.remove("modal-content-show");
-              }
+      addToCart.addEventListener("click", function(event) {
+      event.preventDefault();
+      overlay.classList.add("modal-content-show");
+      });
+      cartPopupClose.addEventListener("click", function(event) {
+      event.preventDefault();
+      cartPopup.classList.remove("modal-content-show");
+      overlay.classList.remove("modal-content-show");
+      });
+      overlay.addEventListener("click", function(event) {
+      event.preventDefault();
+      cartPopup.classList.remove("modal-content-show");
+      overlay.classList.remove("modal-content-show");
+      });
+      window.addEventListener("keydown", function(event) {
+      if (event.keyCode === 27) {
+        if (cartPopup.classList.contains("modal-content-show")) {
+              cartPopup.classList.remove("modal-content-show");
           }
-      });
+          if (overlay.classList.contains("modal-content-show")) {
+                overlay.classList.remove("modal-content-show");
+            }
+        }
+    });
     </script>
   </body>
 </html>
