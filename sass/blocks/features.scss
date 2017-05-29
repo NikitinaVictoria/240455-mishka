@@ -21,18 +21,34 @@
 
   line-height: 21px;
   position: relative;
+  background-repeat: no-repeat;
 }
 
 .features__item--materials {
   padding-right: 31%;
+  background-image: url("../img/icon-feature-materials.svg");
 }
 
 .features__item--hand-made {
   padding-right: 15%;
+  background-image: url("../img/icon-feature-clew.svg");
 }
 
 .features__item--national {
   padding-right: 0;
+  background-image: url("../img/icon-feature-rocket.svg");
+}
+
+.features__item--price {
+  background-image: url("../img/icon-feature-money.svg");
+}
+
+.features__item--likes {
+  background-image: url("../img/icon-feature-heart.svg");
+}
+
+.features__item--gift {
+  background-image: url("../img/icon-feature-gift.svg");
 }
 
 .features__icon {

@@ -9,6 +9,7 @@
   margin-left: auto;
 
   border: 1px solid $border-color;
+  @include container();
 }
 
 .production__title {
@@ -80,7 +81,7 @@
 
     border-top: transparent;
 
-    @include container();
+    // @include container();
   }
 
   .production__video {
