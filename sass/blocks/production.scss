@@ -130,6 +130,7 @@
 
     @include clearfix();
     padding-bottom: 70px;
+    border-top: 1px solid $border-color;
   }
 
   .production__title {
