@@ -24,6 +24,7 @@
   font-weight: normal;
   font-size: 15px;
   color: #444444;
+  max-width: 770px;
 }
 
 .reviews__name {
@@ -192,9 +193,10 @@
   }
 
   .reviews__content {
-    padding-right: 9%;
+    // padding-right: 9%;
     padding-bottom: 25px;
-    padding-left: 17%;
+    // padding-left: 17%;
+    margin-left: 17%;
   }
 
   .reviews__content span {
