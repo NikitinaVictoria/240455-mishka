@@ -39,22 +39,22 @@
           <img src="img/logo-mobile.svg" width="149" height="72" alt="Мишка">
         </picture>
       </a>
-      <nav class="header-nav header-nav--closed header-nav--nojs">
-        <button class="header-nav__toggle" type="button"></button>
-        <ul class="header-nav__main-nav">
-          <li class="header-nav__main-nav-item header-nav__main-nav-item--catalog"><a class="header-nav__main-nav-link header-nav__main-nav-link--catalog" href="catalog.html">Каталог товаров</a></li>
-          <li class="header-nav__main-nav-item header-nav__main-nav-item--order"><a class="header-nav__main-nav-link header-nav__main-nav-link--order">Вязание на заказ</a></li>
-          <li class="header-nav__main-nav-item header-nav__main-nav-item--search"><input class="header-nav__main-nav-search-field" type="text" name="site-search" placeholder="Поиск по сайту"></li>
-          <li class="header-nav__main-nav-item header-nav__main-nav-item--cart">
-            <a class="header-nav__main-nav-link header-nav__main-nav-link--cart" href="#">Корзина: пока пуста
+      <nav class="menu menu--closed menu--nojs">
+        <button class="menu__toggle" type="button"></button>
+        <ul class="menu__list">
+          <li class="menu__item menu__item--catalog"><a class="menu__link menu__link--catalog" href="catalog.html">Каталог товаров</a></li>
+          <li class="menu__item menu__item--order"><a class="menu__link menu__link--order">Вязание на заказ</a></li>
+          <li class="menu__item menu__item--search"><input class="menu__search" type="text" name="site-search" placeholder="Поиск по сайту"></li>
+          <li class="menu__item menu__item--cart">
+            <a class="menu__link menu__link--cart" href="#">Корзина: пока пуста
               <svg class="icon-cart" width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use></svg>
             </a>
           </li>
         </ul>
-        <ul class="header-nav__extra-nav">
-          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--delivery"><span class="header-nav__extra-nav-delivery">Бесплатная доставка по России</span></li>
-          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--new"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--new" href="#">Новые поступления</a></li>
-          <li class="header-nav__extra-nav-item header-nav__extra-nav-item--sale"><a class="header-nav__extra-nav-link header-nav__extra-nav-link--sale" href="#">Распродажа</a></li>
+        <ul class="menu__extra-list">
+          <li class="menu__extra-item menu__extra-item--delivery"><span class="menu__extra-delivery" href="#">Бесплатная доставка по России</span></li>
+          <li class="menu__extra-item menu__extra-item--new"><a class="menu__extra-link menu__extra-link--new" href="#">Новые поступления</a></li>
+          <li class="menu__extra-item menu__extra-item--sale"><a class="menu__extra-link menu__extra-link--sale" href="#">Распродажа</a></li>
         </ul>
         </ul>
       </nav>
@@ -161,30 +161,16 @@
       </div>
     </footer>
     <script>
-      var navHeader = document.querySelector(".header-nav");
-      var navToggle = document.querySelector(".header-nav__toggle");
-      // var AddToCart = document.querySelector(".add-to-cart");
-      // var CartPopup = document.querySelector(".modal-overlay");
-      // AddToCart.addEventListener("click", function(event) {
-      //   event.preventDefault();
-      //   CartPopup.classList.add("modal-overlay-show");
-      //   });
-      //   window.addEventListener("keydown", function(event) {
-      //   if (event.keyCode === 27) {
-      //     if (CartPopup.classList.contains("modal-overlay-show")) {
-      //   CartPopup.classList.remove("modal-overlay-show");
-      //       }
-      //     }
-      // });
-      navHeader.classList.remove("header-nav--nojs");
-
+      var navHeader = document.querySelector(".menu");
+      var navToggle = document.querySelector(".menu__toggle");
+      navHeader.classList.remove("menu--nojs");
       navToggle.addEventListener("click", function() {
-        if (navHeader.classList.contains("header-nav--closed")) {
-          navHeader.classList.remove("header-nav--closed");
-          navHeader.classList.add("header-nav--opened");
+        if (navHeader.classList.contains("menu--closed")) {
+          navHeader.classList.remove("menu--closed");
+          navHeader.classList.add("menu--opened");
         } else {
-          navHeader.classList.add("header-nav--closed");
-          navHeader.classList.remove("header-nav--opened");
+          navHeader.classList.add("menu--closed");
+          navHeader.classList.remove("menu--opened");
         }
       });
     </script>

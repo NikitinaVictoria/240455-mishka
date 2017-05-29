@@ -26,7 +26,7 @@
   color: #444444;
 }
 
-.reviews__author-name {
+.reviews__name {
   margin-bottom: 0;
 
   font-weight: bold;
@@ -35,7 +35,7 @@
   color: #000000;
 }
 
-.reviews__author-social-link {
+.reviews__link {
   font-weight: normal;
   font-size: 18px;
   color: #444444;
@@ -140,13 +140,13 @@
     order: 3;
   }
 
-  .reviews__author-name {
+  .reviews__name {
     margin-bottom: 5px;
 
     font-size: 17px;
   }
 
-  .reviews__author-social-link {
+  .reviews__link {
     font-weight: normal;
     font-size: 17px;
   }

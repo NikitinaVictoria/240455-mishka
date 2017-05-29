@@ -14,7 +14,7 @@
   @include unstyle-list();
 }
 
-.features__list-item {
+.features__item {
   margin-bottom: 25px;
   padding-top: 56px;
   padding-right: 23%;
@@ -23,15 +23,15 @@
   position: relative;
 }
 
-.features__list-item--materials {
+.features__item--materials {
   padding-right: 31%;
 }
 
-.features__list-item--hand-made {
+.features__item--hand-made {
   padding-right: 15%;
 }
 
-.features__list-item--national {
+.features__item--national {
   padding-right: 0;
 }
 
@@ -62,7 +62,7 @@
     flex-wrap: wrap;
   }
 
-  .features__list-item {
+  .features__item {
     box-sizing: border-box;
     width: 50%;
     margin-bottom: 50px;
@@ -73,32 +73,31 @@
     line-height: 24px;
   }
 
-  .features__list-item--hand-made {
+  .features__item--hand-made {
     order: 1;
     padding-right: 6%;
   }
 
-  .features__list-item--price {
+  .features__item--price {
     order: 2;
     padding-right: 15%;
   }
 
-  .features__list-item--national {
+  .features__item--national {
     order: 3;
     padding-right: 6%;
   }
 
-  .features__list-item--likes {
+  .features__item--likes {
     order: 4;
     padding-right: 15%;
   }
 
-  .features__list-item--gift-wrap {
+  .features__item--gift-wrap {
     order: 5;
     padding-right: 6%;
   }
 }
-
 
 @media #{$desktop-widths} {
   .features {
@@ -117,21 +116,21 @@
     padding-left: 17%;
   }
 
-  .features__list-item {
+  .features__item {
     box-sizing: border-box;
     width: 50%;
     padding-right: 13%;
   }
 
-  .features__list-item--materials {
+  .features__item--materials {
     padding-right: 17%;
   }
 
-  .features__list-item--likes {
+  .features__item--likes {
     padding-right: 16%;
   }
 
-  .features__list-item--national {
+  .features__item--national {
     padding-right: 5%;
   }
 }

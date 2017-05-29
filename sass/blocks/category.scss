@@ -1,13 +1,13 @@
 @import "../mixins.scss";
 
-.main-menu {
+.category {
   display: flex;
   flex-wrap: wrap;
 
   @include unstyle-list();
 }
 
-.main-menu__item {
+.category__item {
   display: flex;
   align-items: center;
   width: 100%;
@@ -19,7 +19,7 @@
   }
 }
 
-.main-menu__item-name {
+.category__name {
   box-sizing: border-box;
   padding-right: 70%;
 
@@ -32,11 +32,11 @@
   position: relative;
 }
 
-.main-menu__item-name:active {
+.category__name:active {
   opacity: 0.3;
 }
 
-.main-menu__item-picture {
+.category__picture {
   fill: rgba(59, 176, 157, .5);
   position: absolute;
   top: 50%;
@@ -44,23 +44,23 @@
   right: 0;
 }
 
-.main-menu__item:hover .main-menu__item-picture {
+.category__item:hover .category__picture {
   fill: rgba(41, 165, 146, .7);
 }
 
-.main-menu__item:active .main-menu__item-picture {
+.category__item:active .category__picture {
   fill: rgba(68, 192, 170, .3);
 }
 
 @media #{$tablet-widths} {
-  .main-menu {
+  .category {
     flex-wrap: wrap;
     padding-bottom: 40px;
 
     @include container-fluid();
   }
 
-  .main-menu__item {
+  .category__item {
     width: 50%;
     min-height: 119px;
     background: #63d1bb url("../img/bg-zigzag-fill.svg") no-repeat 100% 120%;
@@ -69,24 +69,24 @@
     }
   }
 
-  .main-menu__item-name {
+  .category__name {
     margin-left: 38px;
 
     font-size: 20px;
     line-height: 30px;
   }
 
-  .main-menu__item-picture {
+  .category__picture {
     right: 15px;
   }
 }
 
 @media #{$desktop-widths} {
-  .main-menu {
+  .category {
     padding-bottom: 0;
   }
 
-  .main-menu__item {
+  .category__item {
     margin-bottom: 117px;
   }
 }

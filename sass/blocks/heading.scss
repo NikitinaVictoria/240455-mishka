@@ -1,13 +1,13 @@
 @import "../mixins.scss";
 
-.catalog-heading {
+.heading {
   padding-top: 70px;
   padding-bottom: 76px;
 
   background-color: #f1f1f1;
 }
 
-.catalog-heading__title {
+.heading__title {
   font-size: 27px;
   text-align: center;
 
@@ -16,12 +16,12 @@
 
 
 @media #{$tablet-widths} {
-  .catalog-heading {
+  .heading {
     padding-top: 23px;
     padding-bottom: 79px;
   }
 
-  .catalog-heading__title {
+  .heading__title {
     padding-left: 10px;
 
     font-size: 43px;
@@ -30,12 +30,12 @@
 }
 
 @media #{$desktop-widths} {
-  .catalog-heading {
+  .heading {
     padding-top: 18px;
     padding-bottom: 103px;
   }
 
-  .catalog-heading__title {
+  .heading__title {
     font-size: 53px;
     line-height: 57px;
   }

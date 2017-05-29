@@ -1,6 +1,6 @@
 @import "../mixins.scss";
 
-.product-of-the-week {
+.offer {
   padding-bottom: 48px;
 
   color: #444444;
@@ -8,7 +8,7 @@
   @include container-fluid();
 }
 
-.product-of-the-week__title-main {
+.offer__title {
   margin-bottom: 0;
   padding-top: 5px;
 
@@ -16,30 +16,30 @@
   color: #000000;
 }
 
-.product-of-the-week__title-note {
+.offer__label {
   font-size: inherit;
   line-height: 16px;
   color: #63d1bb;
   text-transform: uppercase;
 }
 
-.product-of-the-week__info {
+.offer__info {
   margin-bottom: 17px;
 }
 
-.product-of-the-week__description,
-.product-of-the-week__characteristics {
+.offer__description,
+.offer__characteristics {
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
 }
 
-.product-of-the-week__characteristics {
+.offer__characteristics {
   font-size: 0;
   line-height: 20px;
 }
 
-.product-of-the-week__characteristic {
+.offer__characteristic {
   display: inline-block;
   margin-top: 10px;
   margin-bottom: 0;
@@ -50,26 +50,26 @@
   border-bottom: 1px solid $border-color;
 }
 
-.product-of-the-week__characteristic--name {
+.offer__characteristic--name {
   width: 38%;
 }
 
-.product-of-the-week__characteristic--value {
+.offer__characteristic--value {
   width: 62%;
 }
 
-.product-of-the-week__description {
+.offer__description {
   margin-bottom: 28px;
 }
 
-.product-of-the-week__picture {
+.offer__picture {
   margin-bottom: 28px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-.product-of-the-week__price {
+.offer__price {
   margin-bottom: 25px;
 
   font-size: 17px;
@@ -77,44 +77,44 @@
   text-align: center;
 }
 
-.product-of-the-week__order {
+.offer__order {
   @include btn;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media #{$tablet-widths} {
-  .product-of-the-week {
+  .offer {
     margin-bottom: 52px;
   }
 
-  .product-of-the-week__title {
+  .offer__caption {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 51px;
   }
 
-  .product-of-the-week__title-main {
+  .offer__title {
     margin: 0;
 
     font-size: 43px;
     line-height: 50px;
   }
 
-  .product-of-the-week__title-note {
+  .offer__label {
     width: 78px;
     margin-right: 23px;
 
     text-align: center;
   }
 
-  .product-of-the-week__description {
+  .offer__description {
     float: left;
     width: 48%;
   }
 
-  .product-of-the-week__info {
+  .offer__info {
     width: 88%;
     margin: 0;
     padding-bottom: 38px;
@@ -123,30 +123,30 @@
     line-height: 30px;
   }
 
-  .product-of-the-week__picture {
+  .offer__picture {
     float: right;
     width: 334px;
     height: 404px;
     padding-top: 9px;
   }
 
-  .product-of-the-week__characteristics {
+  .offer__characteristics {
     width: 87%;
     margin-bottom: 27px;
   }
 
-  .product-of-the-week__characteristic {
+  .offer__characteristic {
     margin: 0;
 
     line-height: 28px;
   }
 
-  .product-of-the-week__order-details {
+  .offer__details {
     clear: left;
     width: 50%;
   }
 
-  .product-of-the-week__price {
+  .offer__price {
     margin-bottom: 35px;
     padding-left: 76px;
 
@@ -156,7 +156,7 @@
     text-align: left;
   }
 
-  .product-of-the-week__order {
+  .offer__order {
     width: 292px;
 
     font-weight: bold;
@@ -165,17 +165,17 @@
 }
 
 @media #{$desktop-widths} {
-  .product-of-the-week {
+  .offer {
     margin-bottom: 90px;
   }
 
-  .product-of-the-week__title {
+  .offer__caption {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
   }
 
-  .product-of-the-week__title-note {
+  .offer__label {
     box-sizing: border-box;
     width: 175px;
     margin: 0;
@@ -185,40 +185,40 @@
     text-align: center;
   }
 
-  .product-of-the-week__title-main {
+  .offer__title {
     order: 1;
 
     font-size: 53px;
     line-height: 57px;
   }
 
-  .product-of-the-week__description {
+  .offer__description {
     box-sizing: border-box;
     padding-left: 175px;
     margin-bottom: 0;
   }
 
-  .product-of-the-week__info {
+  .offer__info {
     padding-bottom: 50px;
   }
 
-  .product-of-the-week__characteristics {
+  .offer__characteristics {
     width: 291px;
     margin-bottom: 108px;
   }
 
-  .product-of-the-week__order-details {
+  .offer__details {
     box-sizing: border-box;
     width: 50%;
     padding-left: 175px;
   }
 
-  .product-of-the-week__price {
+  .offer__price {
     padding-left: 75px;
 
     text-align: left;
   }
-  .product-of-the-week__picture {
+  .offer__picture {
     width: 525px;
     height: 636px;
     margin-top: -166px;
